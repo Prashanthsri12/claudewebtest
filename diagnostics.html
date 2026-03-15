@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Diagnostic Services | Prithvi Clinic</title>
+  <meta name="description" content="State-of-the-art diagnostic services at Prithvi Clinic, Mogappair Chennai. Sleep Study, EEG, EMG, NCS, BiPAP, Holter Monitor, Pulmonary Function Test and more."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+  <!-- Emergency Bar -->
+  <div id="emergency-bar">
+    <div class="container">
+      <div class="emergency-text">🚨 Emergency? Call us 24/7 — <a href="tel:9600123463">96001 23463</a></div>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><i class="fa-solid fa-plus"></i></div>
+        Prithvi Clinic
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <div class="nav-dropdown">
+          <button class="nav-drop-toggle">Services <i class="fa-solid fa-chevron-down fa-xs"></i></button>
+          <div class="nav-drop-menu">
+            <a href="services/general-medicine.html"><i class="fa-solid fa-stethoscope"></i> General Medicine</a>
+            <a href="services/gynecology.html"><i class="fa-solid fa-venus"></i> Gynecology</a>
+            <a href="services/neurology.html"><i class="fa-solid fa-brain"></i> Neurology</a>
+          </div>
+        </div>
+        <a href="diagnostics.html" class="active">Diagnostics</a>
+        <a href="homecare.html">Home Care</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <a href="index.html#appointment" class="btn btn-primary nav-cta">
+        <i class="fa-regular fa-calendar-check"></i> Book Appointment
+      </a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" onclick="closeMobileNav()">Home</a>
+    <a href="index.html#about" onclick="closeMobileNav()">About</a>
+    <div class="mobile-divider"></div>
+    <a href="services/general-medicine.html" onclick="closeMobileNav()">General Medicine</a>
+    <a href="services/gynecology.html" onclick="closeMobileNav()">Gynecology</a>
+    <a href="services/neurology.html" onclick="closeMobileNav()">Neurology</a>
+    <div class="mobile-divider"></div>
+    <a href="diagnostics.html" onclick="closeMobileNav()">Diagnostics</a>
+    <a href="homecare.html" onclick="closeMobileNav()">Home Care</a>
+    <a href="blog/index.html" onclick="closeMobileNav()">Blog</a>
+    <a href="index.html#contact" onclick="closeMobileNav()">Contact</a>
+    <a href="index.html#appointment" class="btn btn-primary mobile-nav-cta" onclick="closeMobileNav()">Book Appointment</a>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <span class="hero-badge"><i class="fa-solid fa-microscope"></i> Diagnostic Services</span>
+        <h1>State-of-the-Art Diagnostics</h1>
+        <p>Advanced diagnostic testing for accurate, timely results — all under one roof in Mogappair.</p>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right fa-xs"></i>
+          <span>Diagnostics</span>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Why Accurate Diagnosis Matters -->
+  <section class="section section-white reveal">
+    <div class="container">
+      <div class="two-col-grid align-center">
+        <div class="col-text">
+          <span class="section-label">Why It Matters</span>
+          <h2>Why Accurate Diagnosis Matters</h2>
+          <p>Getting the right diagnosis is the single most important step in your healthcare journey. A precise diagnosis allows your doctor to craft a targeted treatment plan, avoiding unnecessary medications or procedures that could delay recovery and increase costs.</p>
+          <p>Early and accurate diagnostic testing can reveal underlying conditions before they progress to serious illness. From neurological disorders to cardiac irregularities and respiratory conditions, timely detection saves lives and improves long-term outcomes.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-circle-check"></i> Accurate diagnosis tailored to your unique condition</li>
+            <li><i class="fa-solid fa-circle-check"></i> Faster, targeted treatment with fewer complications</li>
+            <li><i class="fa-solid fa-circle-check"></i> Preventive insights to safeguard your long-term health</li>
+          </ul>
+        </div>
+        <div class="col-visual">
+          <div class="diag-stats-box reveal">
+            <div class="diag-stat-item">
+              <div class="diag-stat-number">9</div>
+              <div class="diag-stat-label">Diagnostic Services</div>
+            </div>
+            <div class="diag-stat-divider"></div>
+            <div class="diag-stat-item">
+              <div class="diag-stat-number">5+</div>
+              <div class="diag-stat-label">Years Experience</div>
+            </div>
+            <div class="diag-stat-divider"></div>
+            <div class="diag-stat-item">
+              <div class="diag-stat-number">1000+</div>
+              <div class="diag-stat-label">Tests Done</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Diagnostic Services Grid -->
+  <section class="section section-bg-alt reveal">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What We Offer</span>
+        <h2>Our Diagnostic Services</h2>
+        <p>Comprehensive testing capabilities to investigate neurological, cardiac, respiratory, and auditory conditions with precision.</p>
+      </div>
+      <div class="diag-detail-grid">
+
+        <!-- Sleep Study -->
+        <div class="diag-detail-card reveal">
+          <div class="diag-card-icon">
+            <i class="fa-solid fa-moon"></i>
+          </div>
+          <h3>Sleep Study</h3>
+          <p>A comprehensive overnight sleep analysis to diagnose sleep disorders including sleep apnea, insomnia, restless leg syndrome, and narcolepsy. Our sleep studies are conducted using advanced polysomnography equipment.</p>
+          <ul class="diag-card-list">
+            <li><i class="fa-solid fa-check"></i> Overnight monitoring</li>
+            <li><i class="fa-solid fa-check"></i> Brain &amp; eye activity recording</li>
+            <li><i class="fa-solid fa-check"></i> Respiratory monitoring</li>
+            <li><i class="fa-solid fa-check"></i> Oxygen saturation tracking</li>
+          </ul>
+        </div>
+
+        <!-- EEG -->
+        <div class="diag-detail-card reveal">
+          <div class="diag-card-icon">
+            <i class="fa-solid fa-wave-square"></i>
+          </div>
+          <h3>EEG (Electroencephalogram)</h3>
+          <p>Electroencephalography measures and records the electrical activity of the brain. Used primarily to diagnose epilepsy, brain tumors, head injuries, and sleep disorders.</p>
+          <ul class="diag-card-list">
+            <li><i class="fa-solid fa-check"></i> Epilepsy diagnosis</li>
+            <li><i class="fa-solid fa-check"></i> Brain activity mapping</li>
+            <li><i class="fa-solid fa-check"></i> Seizure localization</li>
+            <li><i class="fa-solid fa-check"></i> Routine &amp; ambulatory EEG</li>
+          </ul>
+        </div>
+
+        <!-- EMG -->
+        <div class="diag-detail-card reveal">
+          <div class="diag-card-icon">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3>EMG (Electromyography)</h3>
+          <p>Electromyography evaluates the health of muscles and the nerve cells (motor neurons) that control them. Essential for diagnosing neuromuscular diseases.</p>
+          <ul class="diag-card-list">
+            <li><i class="fa-solid fa-check"></i> Muscle disease diagnosis</li>
+            <li><i class="fa-solid fa-check"></i> Nerve function testing</li>
+            <li><i class="fa-solid fa-check"></i> ALS &amp; myopathy workup</li>
+            <li><i class="fa-solid fa-check"></i> Post-stroke assessment</li>
+          </ul>
+        </div>
+
+        <!-- NCS -->
+        <div class="diag-detail-card reveal">
+          <div class="diag-card-icon">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <h3>NCS (Nerve Conduction Study)</h3>
+          <p>Nerve Conduction Studies measure the speed and strength of electrical signals through nerves. Critical for diagnosing peripheral neuropathy, carpal tunnel, and Guillain-Barré.</p>
+          <ul class="diag-card-list">
+            <li><i class="fa-solid fa-check"></i> Peripheral neuropathy</li>
+            <li><i class="fa-solid fa-check"></i> Carpal tunnel syndrome</li>
+            <li><i class="fa-solid fa-check"></i> Radiculopathy</li>
+            <li><i class="fa-solid fa-check"></i> Polyneuropathy evaluation</li>
+          </ul>
+        </div>
+
+        <!-- BiPAP / CPAP -->
+        <div class="diag-detail-card reveal">
+          <div class="diag-card-icon">
+            <i class="fa-solid fa-lungs"></i>
+          </div>
+          <h3>BiPAP / CPAP Therapy</h3>
+          <p>Bilevel and Continuous Positive Airway Pressure therapy for patients with obstructive sleep apnea and respiratory conditions. We provide both titration and ongoing therapy support.</p>
+          <ul class="diag-card-list">
+            <li><i class="fa-solid fa-check"></i> Sleep apnea treatment</li>
+            <li><i class="fa-solid fa-check"></i> COPD management</li>
+            <li><i class="fa-solid fa-check"></i> Home setup support</li>
+            <li><i class="fa-solid fa-check"></i> Mask fitting &amp; training</li>
+          </ul>
+        </div>
+
+        <!-- 24Hr Ambulatory BP -->
+        <div class="diag-detail-card reveal">
+          <div class="diag-card-icon">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h3>24Hr Ambulatory BP Monitor</h3>
+          <p>A portable blood pressure monitor worn for 24 hours to track BP fluctuations during daily activities and sleep — the gold standard for hypertension diagnosis.</p>
+          <ul class="diag-card-list">
+            <li><i class="fa-solid fa-check"></i> White coat hypertension</li>
+            <li><i class="fa-solid fa-check"></i> Masked hypertension</li>
+            <li><i class="fa-solid fa-check"></i> BP variability analysis</li>
+            <li><i class="fa-solid fa-check"></i> Medication efficacy monitoring</li>
+          </ul>
+        </div>
+
+        <!-- PFT -->
+        <div class="diag-detail-card reveal">
+          <div class="diag-card-icon">
+            <i class="fa-solid fa-wind"></i>
+          </div>
+          <h3>Pulmonary Function Test (PFT)</h3>
+          <p>Spirometry and comprehensive lung function testing to assess breathing capacity. Used for diagnosing asthma, COPD, restrictive lung disease, and pre-surgical assessment.</p>
+          <ul class="diag-card-list">
+            <li><i class="fa-solid fa-check"></i> FEV1/FVC measurement</li>
+            <li><i class="fa-solid fa-check"></i> Bronchodilator response</li>
+            <li><i class="fa-solid fa-check"></i> Diffusion capacity</li>
+            <li><i class="fa-solid fa-check"></i> Pre-surgical lung clearance</li>
+          </ul>
+        </div>
+
+        <!-- 24Hr Holter Monitor -->
+        <div class="diag-detail-card reveal">
+          <div class="diag-card-icon">
+            <i class="fa-solid fa-heartbeat"></i>
+          </div>
+          <h3>24Hr Holter Monitor</h3>
+          <p>A wearable ECG device that continuously records heart rhythm for 24 hours, detecting arrhythmias, palpitations, and silent cardiac events missed by standard ECG.</p>
+          <ul class="diag-card-list">
+            <li><i class="fa-solid fa-check"></i> Arrhythmia detection</li>
+            <li><i class="fa-solid fa-check"></i> Palpitation evaluation</li>
+            <li><i class="fa-solid fa-check"></i> Heart block diagnosis</li>
+            <li><i class="fa-solid fa-check"></i> Post-syncope workup</li>
+          </ul>
+        </div>
+
+        <!-- Audiometry -->
+        <div class="diag-detail-card reveal">
+          <div class="diag-card-icon">
+            <i class="fa-solid fa-ear-listen"></i>
+          </div>
+          <h3>Audiometry</h3>
+          <p>Comprehensive hearing assessment using pure-tone and speech audiometry to evaluate hearing sensitivity across frequencies. Used for hearing loss diagnosis and hearing aid fitting.</p>
+          <ul class="diag-card-list">
+            <li><i class="fa-solid fa-check"></i> Pure-tone audiometry</li>
+            <li><i class="fa-solid fa-check"></i> Speech audiometry</li>
+            <li><i class="fa-solid fa-check"></i> Tympanometry</li>
+            <li><i class="fa-solid fa-check"></i> Hearing aid assessment</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Why Choose Us -->
+  <section class="section section-white reveal">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Advantage</span>
+        <h2>Why Choose Prithvi Clinic for Diagnostics?</h2>
+        <p>We combine advanced technology with compassionate care to deliver diagnostic excellence.</p>
+      </div>
+      <div class="why-diag-grid">
+
+        <div class="why-diag-card reveal">
+          <div class="why-diag-emoji">🎯</div>
+          <h3>Precision Equipment</h3>
+          <p>Latest diagnostic devices for accurate, reliable results.</p>
+        </div>
+
+        <div class="why-diag-card reveal">
+          <div class="why-diag-emoji">👨‍⚕️</div>
+          <h3>Expert Interpretation</h3>
+          <p>Results reviewed by experienced specialists.</p>
+        </div>
+
+        <div class="why-diag-card reveal">
+          <div class="why-diag-emoji">⚡</div>
+          <h3>Quick Turnaround</h3>
+          <p>Most results available within 24–48 hours.</p>
+        </div>
+
+        <div class="why-diag-card reveal">
+          <div class="why-diag-emoji">🏠</div>
+          <h3>Home Services</h3>
+          <p>Select diagnostic collections available at home.</p>
+        </div>
+
+        <div class="why-diag-card reveal">
+          <div class="why-diag-emoji">💰</div>
+          <h3>Affordable Pricing</h3>
+          <p>Transparent, competitive pricing with no hidden costs.</p>
+        </div>
+
+        <div class="why-diag-card reveal">
+          <div class="why-diag-emoji">📋</div>
+          <h3>Comprehensive Reports</h3>
+          <p>Detailed reports with specialist commentary.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: CTA Band -->
+  <section class="cta-band reveal">
+    <div class="container">
+      <div class="cta-band-content">
+        <h2>Book Your Diagnostic Test Today</h2>
+        <p>Get accurate answers fast. Our diagnostic team is ready to help you understand your health with clarity and confidence.</p>
+        <div class="cta-band-actions">
+          <a href="index.html#appointment" class="btn btn-accent">
+            <i class="fa-regular fa-calendar-check"></i> Book Appointment
+          </a>
+          <a href="tel:9600123463" class="btn btn-outline-white">
+            <i class="fa-solid fa-phone"></i> Call: 96001 23463
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo"><div class="fl-icon"><i class="fa-solid fa-plus"></i></div>Prithvi Clinic</div>
+          <p style="margin-bottom:6px;font-weight:600;color:rgba(255,255,255,0.9);">Your Health, Our Priority</p>
+          <p>Trusted healthcare in Mogappair since 2018.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <nav class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#specialties">Specialties</a>
+            <a href="diagnostics.html">Diagnostics</a>
+            <a href="homecare.html">Home Care</a>
+            <a href="index.html#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <nav class="footer-links">
+            <a href="services/general-medicine.html">General Medicine</a>
+            <a href="services/gynecology.html">Gynaecology</a>
+            <a href="services/neurology.html">Neurology</a>
+            <a href="homecare.html">Home Care</a>
+            <a href="diagnostics.html">Diagnostics</a>
+            <a href="blog/index.html">Blog</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><div><a href="tel:9600123463">96001 23463</a><br/><a href="tel:7397391156">7397391156</a></div></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:prithviclinic@gmail.com">prithviclinic@gmail.com</a></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>8 Thilakar St, Mogappair West, Chennai – 600037</span></div>
+          <a href="https://wa.me/917397391156" class="footer-wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2025 <span>Prithvi Clinic</span> · All Rights Reserved · Chennai</div></div>
+  </footer>
+
+  <!-- Floating Elements -->
+  <div class="float-wrap">
+    <button id="scrollTop" aria-label="Scroll to top"><i class="fa-solid fa-chevron-up"></i></button>
+    <div class="wa-float">
+      <div class="wa-pulse"></div>
+      <a href="https://wa.me/917397391156" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <div class="wa-tooltip">Chat with us</div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

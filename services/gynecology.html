@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Gynecology &amp; Obstetrics | Prithvi Clinic</title>
+  <meta name="description" content="Expert gynecological and obstetric care at Prithvi Clinic, Mogappair West, Chennai. Prenatal care, PCOS management, high-risk pregnancy, and women's health services."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <style>
+    /* ── Page-specific styles ── */
+    .service-hero {
+      background: linear-gradient(135deg, #6b2d8b 0%, #17A589 100%);
+      padding: 120px 0 70px;
+      color: #fff;
+      text-align: center;
+    }
+    .service-hero .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .service-hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .service-hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 620px;
+      margin: 0 auto 24px;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.875rem;
+      opacity: 0.8;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: #fff; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb i { font-size: 0.65rem; }
+
+    /* Overview */
+    .service-overview {
+      padding: 80px 0;
+      background: var(--bg, #F8FAFC);
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .service-img-block {
+      min-height: 320px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #6b2d8b, #17A589);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-img-block i {
+      font-size: 90px;
+      color: #fff;
+      opacity: 0.3;
+    }
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--secondary, #17A589);
+      margin-bottom: 10px;
+    }
+    .overview-content h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--primary, #0A3D62);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    .overview-content p {
+      color: #555;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .service-checklist {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .service-checklist li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #333;
+    }
+    .service-checklist li i {
+      color: var(--secondary, #17A589);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    /* Conditions */
+    .conditions-section {
+      padding: 80px 0;
+      background: var(--bg-alt, #EEF2F7);
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .section-header h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      color: var(--primary, #0A3D62);
+      margin-bottom: 10px;
+    }
+    .section-header p {
+      color: #666;
+      max-width: 540px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .conditions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .condition-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .condition-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+    }
+    .condition-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(107,45,139,0.1), rgba(23,165,137,0.15));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .condition-icon i {
+      font-size: 1.3rem;
+      color: #6b2d8b;
+    }
+    .condition-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary, #0A3D62);
+      margin-bottom: 8px;
+    }
+    .condition-card p {
+      font-size: 0.875rem;
+      color: #666;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Process */
+    .process-section {
+      padding: 80px 0;
+      background: #fff;
+    }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-top: 10px;
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: calc(12.5% + 16px);
+      right: calc(12.5% + 16px);
+      height: 2px;
+      background: linear-gradient(90deg, #6b2d8b, var(--secondary, #17A589));
+      z-index: 0;
+    }
+    .process-step {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .step-num {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6b2d8b, var(--secondary, #17A589));
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 4px 16px rgba(107,45,139,0.3);
+    }
+    .process-step h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary, #0A3D62);
+      margin-bottom: 8px;
+    }
+    .process-step p {
+      font-size: 0.875rem;
+      color: #666;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Doctor */
+    .doctor-section {
+      padding: 80px 0;
+      background: var(--bg-alt, #EEF2F7);
+    }
+    .doc-mini-card {
+      max-width: 480px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 36px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .doc-avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6b2d8b, var(--secondary, #17A589));
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .doc-mini-card h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--primary, #0A3D62);
+      margin-bottom: 6px;
+    }
+    .doc-mini-card .doc-quals {
+      font-size: 0.875rem;
+      color: #666;
+      margin-bottom: 12px;
+    }
+    .doc-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(107,45,139,0.1), rgba(23,165,137,0.15));
+      color: #6b2d8b;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+      letter-spacing: 0.03em;
+    }
+    .doc-mini-card p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    /* CTA Band */
+    .cta-band {
+      background: linear-gradient(135deg, #6b2d8b 0%, #17A589 100%);
+      padding: 70px 0;
+      text-align: center;
+      color: #fff;
+    }
+    .cta-band h2 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+    .cta-band p {
+      font-size: 1.05rem;
+      opacity: 0.9;
+      max-width: 520px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+    .cta-band .btn-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-white {
+      background: #fff;
+      color: #6b2d8b;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      padding: 13px 32px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.15);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 900px) {
+      .overview-grid { grid-template-columns: 1fr; gap: 36px; }
+      .conditions-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .process-steps::before { display: none; }
+    }
+    @media (max-width: 600px) {
+      .conditions-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Emergency Bar -->
+  <div id="emergency-bar">
+    <div class="container">
+      <div class="emergency-text">🚨 Emergency? Call us 24/7 — <a href="tel:9600123463">96001 23463</a></div>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon"><i class="fa-solid fa-plus"></i></div>
+        Prithvi Clinic
+      </a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#about">About</a>
+        <div class="nav-dropdown">
+          <button class="nav-drop-toggle">Services <i class="fa-solid fa-chevron-down fa-xs"></i></button>
+          <div class="nav-drop-menu">
+            <a href="../services/general-medicine.html"><i class="fa-solid fa-stethoscope"></i> General Medicine</a>
+            <a href="../services/gynecology.html"><i class="fa-solid fa-venus"></i> Gynecology</a>
+            <a href="../services/neurology.html"><i class="fa-solid fa-brain"></i> Neurology</a>
+          </div>
+        </div>
+        <a href="../diagnostics.html">Diagnostics</a>
+        <a href="../homecare.html">Home Care</a>
+        <a href="../blog/index.html">Blog</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+      <a href="../index.html#appointment" class="btn btn-primary nav-cta">
+        <i class="fa-regular fa-calendar-check"></i> Book Appointment
+      </a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="../index.html" onclick="closeMobileNav()">Home</a>
+    <a href="../index.html#about" onclick="closeMobileNav()">About</a>
+    <div class="mobile-divider"></div>
+    <a href="../services/general-medicine.html" onclick="closeMobileNav()">General Medicine</a>
+    <a href="../services/gynecology.html" onclick="closeMobileNav()">Gynecology</a>
+    <a href="../services/neurology.html" onclick="closeMobileNav()">Neurology</a>
+    <div class="mobile-divider"></div>
+    <a href="../diagnostics.html" onclick="closeMobileNav()">Diagnostics</a>
+    <a href="../homecare.html" onclick="closeMobileNav()">Home Care</a>
+    <a href="../blog/index.html" onclick="closeMobileNav()">Blog</a>
+    <a href="../index.html#contact" onclick="closeMobileNav()">Contact</a>
+    <a href="../index.html#appointment" class="btn btn-primary mobile-nav-cta" onclick="closeMobileNav()">Book Appointment</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="service-hero">
+    <div class="container">
+      <div class="hero-badge"><i class="fa-solid fa-venus"></i> Gynecology &amp; Obstetrics</div>
+      <h1>Women's Health &amp; Obstetric Care</h1>
+      <p>Expert gynecological care, prenatal support, and obstetric expertise for every stage of a woman's life.</p>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Services</span>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Gynecology &amp; Obstetrics</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Section 1: Overview -->
+  <section class="service-overview reveal">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="service-img-block reveal">
+          <i class="fa-solid fa-venus"></i>
+        </div>
+        <div class="overview-content reveal reveal-delay-1">
+          <p class="section-label">About This Service</p>
+          <h2>Compassionate Women's Healthcare</h2>
+          <p>At Prithvi Clinic, our Gynecology &amp; Obstetrics department offers comprehensive women's health services delivered with expertise and compassion. Under the care of Dr. S.V. Priyanka — an experienced obstetrician and gynecologist — we provide evidence-based care tailored to each woman's unique needs, from adolescence through menopause and beyond.</p>
+          <p>Whether you are planning a family, navigating a high-risk pregnancy, managing a hormonal condition such as PCOS, or seeking regular gynecological screening, our team ensures you receive personalized, dignified, and thorough medical attention in a supportive environment. We combine the latest clinical practices with a deep respect for every patient's concerns.</p>
+          <ul class="service-checklist">
+            <li><i class="fa-solid fa-circle-check"></i> Prenatal &amp; antenatal care</li>
+            <li><i class="fa-solid fa-circle-check"></i> High-risk pregnancy management</li>
+            <li><i class="fa-solid fa-circle-check"></i> Gynecological surgeries</li>
+            <li><i class="fa-solid fa-circle-check"></i> PCOS / PCOD treatment</li>
+            <li><i class="fa-solid fa-circle-check"></i> Menstrual disorder management</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Conditions We Treat -->
+  <section class="conditions-section reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2>Conditions We Treat</h2>
+        <p>Comprehensive women's health services covering obstetric, gynecological, and hormonal conditions at every life stage.</p>
+      </div>
+      <div class="conditions-grid">
+        <div class="condition-card reveal">
+          <div class="condition-icon"><i class="fa-solid fa-baby"></i></div>
+          <h3>Prenatal Care</h3>
+          <p>Complete antenatal care and pregnancy monitoring.</p>
+        </div>
+        <div class="condition-card reveal reveal-delay-1">
+          <div class="condition-icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+          <h3>High-Risk Pregnancy</h3>
+          <p>Specialized monitoring for complex pregnancies.</p>
+        </div>
+        <div class="condition-card reveal reveal-delay-1">
+          <div class="condition-icon"><i class="fa-solid fa-venus"></i></div>
+          <h3>PCOS / PCOD</h3>
+          <p>Hormonal management and fertility support.</p>
+        </div>
+        <div class="condition-card reveal">
+          <div class="condition-icon"><i class="fa-solid fa-droplet-slash"></i></div>
+          <h3>Menstrual Disorders</h3>
+          <p>Irregular cycles, heavy bleeding, dysmenorrhea.</p>
+        </div>
+        <div class="condition-card reveal reveal-delay-1">
+          <div class="condition-icon"><i class="fa-solid fa-shield-heart"></i></div>
+          <h3>Cervical Health</h3>
+          <p>Pap smear, HPV screening, colposcopy.</p>
+        </div>
+        <div class="condition-card reveal reveal-delay-1">
+          <div class="condition-icon"><i class="fa-solid fa-baby-carriage"></i></div>
+          <h3>Infertility</h3>
+          <p>Initial workup and fertility counseling.</p>
+        </div>
+        <div class="condition-card reveal">
+          <div class="condition-icon"><i class="fa-solid fa-heart"></i></div>
+          <h3>Menopause</h3>
+          <p>Hormone therapy and symptom management.</p>
+        </div>
+        <div class="condition-card reveal reveal-delay-1">
+          <div class="condition-icon"><i class="fa-solid fa-stethoscope"></i></div>
+          <h3>Gynecological Infections</h3>
+          <p>UTI, vaginitis, STI screening and treatment.</p>
+        </div>
+        <div class="condition-card reveal reveal-delay-1">
+          <div class="condition-icon"><i class="fa-solid fa-scissors"></i></div>
+          <h3>Surgical Procedures</h3>
+          <p>Laparoscopy, D&amp;C, fibroid management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Treatment Process -->
+  <section class="process-section reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2>How We Care For You</h2>
+        <p>A structured, supportive pathway from your first visit to ongoing health management.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="step-num">1</div>
+          <h3>Initial Consultation</h3>
+          <p>Detailed history, symptom review, and discussion of your health goals</p>
+        </div>
+        <div class="process-step reveal reveal-delay-1">
+          <div class="step-num">2</div>
+          <h3>Investigations &amp; Scans</h3>
+          <p>Ultrasound, blood tests, and targeted diagnostic workup</p>
+        </div>
+        <div class="process-step reveal reveal-delay-1">
+          <div class="step-num">3</div>
+          <h3>Personalized Care Plan</h3>
+          <p>Evidence-based treatment tailored to your specific condition</p>
+        </div>
+        <div class="process-step reveal reveal-delay-1">
+          <div class="step-num">4</div>
+          <h3>Ongoing Monitoring</h3>
+          <p>Regular follow-ups to track progress and adjust care as needed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Doctor -->
+  <section class="doctor-section reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2>Your Doctor</h2>
+        <p>Meet the specialist dedicated to your women's health care.</p>
+      </div>
+      <div class="doc-mini-card reveal">
+        <div class="doc-avatar">SP</div>
+        <h3>Dr. S.V. Priyanka</h3>
+        <p class="doc-quals">M.B.B.S., M.S.(OBG), R.C.D.</p>
+        <span class="doc-badge">Gynecology &amp; Obstetrics</span>
+        <p>Dr. S.V. Priyanka is a skilled obstetrician and gynecologist with specialized training in obstetrics and gynecological surgery. She brings empathy and clinical excellence to every consultation, making her patients feel heard and well cared for throughout every phase of their women's health journey.</p>
+        <a href="../index.html#appointment" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:8px;">
+          <i class="fa-regular fa-calendar-check"></i> Book Appointment
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: CTA Band -->
+  <section class="cta-band reveal">
+    <div class="container">
+      <h2>Ready to See a Doctor?</h2>
+      <p>Your health and well-being come first. Book a consultation with Dr. Priyanka today or call us — we're always here for you.</p>
+      <div class="btn-group">
+        <a href="../index.html#appointment" class="btn-white">
+          <i class="fa-regular fa-calendar-check"></i> Book Appointment
+        </a>
+        <a href="tel:9600123463" class="btn-outline-white" style="color:white;border-color:white;">
+          <i class="fa-solid fa-phone"></i> Call Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo"><div class="fl-icon"><i class="fa-solid fa-plus"></i></div>Prithvi Clinic</div>
+          <p style="margin-bottom:6px;font-weight:600;color:rgba(255,255,255,0.9);">Your Health, Our Priority</p>
+          <p>Trusted healthcare in Mogappair since 2018.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <nav class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#specialties">Specialties</a>
+            <a href="../diagnostics.html">Diagnostics</a>
+            <a href="../homecare.html">Home Care</a>
+            <a href="../index.html#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <nav class="footer-links">
+            <a href="../services/general-medicine.html">General Medicine</a>
+            <a href="../services/gynecology.html">Gynaecology</a>
+            <a href="../services/neurology.html">Neurology</a>
+            <a href="../homecare.html">Home Care</a>
+            <a href="../diagnostics.html">Diagnostics</a>
+            <a href="../blog/index.html">Blog</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><div><a href="tel:9600123463">96001 23463</a><br/><a href="tel:7397391156">7397391156</a></div></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:prithviclinic@gmail.com">prithviclinic@gmail.com</a></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>8 Thilakar St, Mogappair West, Chennai – 600037</span></div>
+          <a href="https://wa.me/917397391156" class="footer-wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2025 <span>Prithvi Clinic</span> · All Rights Reserved · Chennai</div></div>
+  </footer>
+
+  <!-- Floating Elements -->
+  <div class="float-wrap">
+    <button id="scrollTop" aria-label="Scroll to top"><i class="fa-solid fa-chevron-up"></i></button>
+    <div class="wa-float">
+      <div class="wa-pulse"></div>
+      <a href="https://wa.me/917397391156" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <div class="wa-tooltip">Chat with us</div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

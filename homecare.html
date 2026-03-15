@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Home Care Services | Prithvi Clinic</title>
+  <meta name="description" content="Prithvi Clinic brings pharmacy, lab investigations, and medical equipment to your doorstep in Mogappair, Chennai."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+  <!-- Emergency Bar -->
+  <div id="emergency-bar">
+    <div class="container">
+      <div class="emergency-text">🚨 Emergency? Call us 24/7 — <a href="tel:9600123463">96001 23463</a></div>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><i class="fa-solid fa-plus"></i></div>
+        Prithvi Clinic
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <div class="nav-dropdown">
+          <button class="nav-drop-toggle">Services <i class="fa-solid fa-chevron-down fa-xs"></i></button>
+          <div class="nav-drop-menu">
+            <a href="services/general-medicine.html"><i class="fa-solid fa-stethoscope"></i> General Medicine</a>
+            <a href="services/gynecology.html"><i class="fa-solid fa-venus"></i> Gynecology</a>
+            <a href="services/neurology.html"><i class="fa-solid fa-brain"></i> Neurology</a>
+          </div>
+        </div>
+        <a href="diagnostics.html">Diagnostics</a>
+        <a href="homecare.html" class="active">Home Care</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <a href="index.html#appointment" class="btn btn-primary nav-cta">
+        <i class="fa-regular fa-calendar-check"></i> Book Appointment
+      </a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" onclick="closeMobileNav()">Home</a>
+    <a href="index.html#about" onclick="closeMobileNav()">About</a>
+    <div class="mobile-divider"></div>
+    <a href="services/general-medicine.html" onclick="closeMobileNav()">General Medicine</a>
+    <a href="services/gynecology.html" onclick="closeMobileNav()">Gynecology</a>
+    <a href="services/neurology.html" onclick="closeMobileNav()">Neurology</a>
+    <div class="mobile-divider"></div>
+    <a href="diagnostics.html" onclick="closeMobileNav()">Diagnostics</a>
+    <a href="homecare.html" onclick="closeMobileNav()">Home Care</a>
+    <a href="blog/index.html" onclick="closeMobileNav()">Blog</a>
+    <a href="index.html#contact" onclick="closeMobileNav()">Contact</a>
+    <a href="index.html#appointment" class="btn btn-primary mobile-nav-cta" onclick="closeMobileNav()">Book Appointment</a>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <span class="hero-badge"><i class="fa-solid fa-house-medical"></i> Home Care Services</span>
+        <h1>Healthcare at Your Doorstep</h1>
+        <p>We bring quality medical care — medicines, tests, and equipment — directly to your home.</p>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right fa-xs"></i>
+          <span>Home Care</span>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Overview -->
+  <section class="section section-white reveal">
+    <div class="container">
+
+      <!-- Why Choose Home Healthcare -->
+      <div class="section-header">
+        <span class="section-label">Our Approach</span>
+        <h2>Why Choose Home Healthcare?</h2>
+        <p>Experience the convenience of professional medical services delivered with care, right where you are most comfortable.</p>
+      </div>
+      <div class="homecare-info-grid reveal">
+        <div class="homecare-info-card">
+          <div class="homecare-info-emoji">❤️</div>
+          <h3>Comfort</h3>
+          <p>Recover in the comfort and safety of your own home.</p>
+        </div>
+        <div class="homecare-info-card">
+          <div class="homecare-info-emoji">⏰</div>
+          <h3>Convenience</h3>
+          <p>No travel, no waiting rooms — care comes to you.</p>
+        </div>
+        <div class="homecare-info-card">
+          <div class="homecare-info-emoji">👨‍👩‍👧</div>
+          <h3>Family Support</h3>
+          <p>Loved ones stay close during your recovery.</p>
+        </div>
+      </div>
+
+      <!-- Two-col: Text + Stats -->
+      <div class="two-col-grid align-center" style="margin-top:64px;">
+        <div class="col-text">
+          <span class="section-label">About Our Service</span>
+          <h2>Trusted Home Healthcare in Mogappair</h2>
+          <p>Prithvi Clinic's home healthcare service is designed to bring the full spectrum of medical support directly to your doorstep. Whether you need prescription medications, laboratory investigations, or medical equipment for recovery, our dedicated team ensures prompt, professional service every time.</p>
+          <p>Our home care program is supervised by our in-clinic doctors, ensuring every service meets the same high standards you experience at Prithvi Clinic. We serve patients across Mogappair West and the surrounding neighbourhoods of Chennai.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-circle-check"></i> Trained professionals at your door</li>
+            <li><i class="fa-solid fa-circle-check"></i> Clinic-grade equipment provided</li>
+            <li><i class="fa-solid fa-circle-check"></i> Same-day delivery for urgent needs</li>
+            <li><i class="fa-solid fa-circle-check"></i> Doctor-supervised care throughout</li>
+          </ul>
+        </div>
+        <div class="col-visual">
+          <div class="homecare-stats-box reveal">
+            <div class="homecare-stat-item">
+              <div class="homecare-stat-number">500+</div>
+              <div class="homecare-stat-label">Home Visits</div>
+            </div>
+            <div class="homecare-stat-divider"></div>
+            <div class="homecare-stat-item">
+              <div class="homecare-stat-icon"><i class="fa-solid fa-truck-fast"></i></div>
+              <div class="homecare-stat-label">Same Day Delivery</div>
+            </div>
+            <div class="homecare-stat-divider"></div>
+            <div class="homecare-stat-item">
+              <div class="homecare-stat-icon"><i class="fa-solid fa-headset"></i></div>
+              <div class="homecare-stat-label">24/7 Support</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Pharmacy at Home -->
+  <section class="section section-bg-alt reveal">
+    <div class="container">
+      <div class="homecare-detail-section">
+
+        <div class="homecare-visual-block" style="background:linear-gradient(135deg,#17A589,#0A3D62);">
+          <div class="homecare-visual-emoji">💊</div>
+          <div class="homecare-visual-label">Pharmacy at Home</div>
+        </div>
+
+        <div class="homecare-detail-content">
+          <span class="section-label">Service 01</span>
+          <h2>Pharmacy at Home</h2>
+          <p>Skip the queue at the pharmacy. Prithvi Clinic delivers your prescribed medications and over-the-counter products directly to your home across Mogappair and nearby areas. Our pharmacy team verifies every prescription and ensures medications are safely packaged and delivered on time.</p>
+          <p>We cater to patients managing chronic illnesses such as diabetes, hypertension, and thyroid disorders who need regular refills, as well as patients recovering from surgery or acute illness who require immediate medication access without the hassle of stepping out.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-circle-check"></i> Prescription medicines delivered</li>
+            <li><i class="fa-solid fa-circle-check"></i> OTC medications available</li>
+            <li><i class="fa-solid fa-circle-check"></i> Medical supplies &amp; consumables</li>
+            <li><i class="fa-solid fa-circle-check"></i> Chronic disease medications</li>
+            <li><i class="fa-solid fa-circle-check"></i> Next-day refills for regular patients</li>
+            <li><i class="fa-solid fa-circle-check"></i> Discrete, secure packaging</li>
+          </ul>
+          <a href="https://wa.me/917397391156" class="btn btn-primary" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Book Now on WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Investigations at Home -->
+  <section class="section section-white reveal">
+    <div class="container">
+      <div class="homecare-detail-section reverse">
+
+        <div class="homecare-visual-block" style="background:linear-gradient(135deg,#1565c0,#17A589);">
+          <div class="homecare-visual-emoji">🧪</div>
+          <div class="homecare-visual-label">Investigations at Home</div>
+        </div>
+
+        <div class="homecare-detail-content">
+          <span class="section-label">Service 02</span>
+          <h2>Investigations at Home</h2>
+          <p>Our trained phlebotomists and healthcare technicians visit your home to collect samples for blood tests, urine analysis, and perform bedside investigations such as ECG and glucose monitoring. All samples are processed at accredited laboratories with reports delivered directly to you.</p>
+          <p>Home investigations are ideal for elderly patients, post-operative care, individuals with mobility challenges, or anyone who simply values convenience without compromising on quality and accuracy of results.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-circle-check"></i> Blood tests &amp; CBC panels</li>
+            <li><i class="fa-solid fa-circle-check"></i> Urine analysis &amp; culture</li>
+            <li><i class="fa-solid fa-circle-check"></i> ECG at home</li>
+            <li><i class="fa-solid fa-circle-check"></i> Glucose monitoring &amp; HbA1c</li>
+            <li><i class="fa-solid fa-circle-check"></i> Safe &amp; sterile sample collection</li>
+            <li><i class="fa-solid fa-circle-check"></i> Digital report delivery</li>
+          </ul>
+          <a href="https://wa.me/917397391156" class="btn btn-primary" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Book Now on WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Medical Equipment -->
+  <section class="section section-bg-alt reveal">
+    <div class="container">
+      <div class="homecare-detail-section">
+
+        <div class="homecare-visual-block" style="background:linear-gradient(135deg,#0A3D62,#6b2d8b);">
+          <div class="homecare-visual-emoji">🛏️</div>
+          <div class="homecare-visual-label">Medical Equipment</div>
+        </div>
+
+        <div class="homecare-detail-content">
+          <span class="section-label">Service 03</span>
+          <h2>Medical Equipment at Home</h2>
+          <p>We supply and deliver a wide range of medical equipment for home use, whether for short-term post-operative recovery or long-term chronic care management. All equipment is sanitised, calibrated, and ready for immediate use upon delivery.</p>
+          <p>Our team provides full setup assistance and user training so patients and caregivers feel confident operating the equipment. We also offer rental and purchase options to suit different care needs and budgets.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-circle-check"></i> Oxygen concentrators</li>
+            <li><i class="fa-solid fa-circle-check"></i> Wheelchairs &amp; mobility aids</li>
+            <li><i class="fa-solid fa-circle-check"></i> Hospital beds &amp; mattresses</li>
+            <li><i class="fa-solid fa-circle-check"></i> BP monitors &amp; glucometers</li>
+            <li><i class="fa-solid fa-circle-check"></i> Pulse oximeters</li>
+            <li><i class="fa-solid fa-circle-check"></i> Nebulizers &amp; spacers</li>
+          </ul>
+          <a href="https://wa.me/917397391156" class="btn btn-primary" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Book Now on WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: How It Works -->
+  <section class="section section-white reveal">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Simple Process</span>
+        <h2>How It Works</h2>
+        <p>Getting home healthcare from Prithvi Clinic is easy. Follow these four simple steps.</p>
+      </div>
+      <div class="process-steps">
+
+        <div class="process-step reveal">
+          <div class="process-step-number">1</div>
+          <div class="process-step-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <h3>Call / WhatsApp Us</h3>
+          <p>Reach us on <a href="tel:9600123463">96001 23463</a> or <a href="https://wa.me/917397391156" target="_blank" rel="noopener">WhatsApp</a> to describe your requirement and preferred delivery time.</p>
+        </div>
+
+        <div class="process-step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+        <div class="process-step reveal">
+          <div class="process-step-number">2</div>
+          <div class="process-step-icon"><i class="fa-solid fa-file-prescription"></i></div>
+          <h3>Doctor Prescription Verified</h3>
+          <p>Our team verifies your prescription with our doctors to ensure accuracy, safety, and compliance before processing your request.</p>
+        </div>
+
+        <div class="process-step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+        <div class="process-step reveal">
+          <div class="process-step-number">3</div>
+          <div class="process-step-icon"><i class="fa-solid fa-calendar-check"></i></div>
+          <h3>Delivery Scheduled</h3>
+          <p>We confirm your delivery window and assign a trained healthcare professional or delivery executive to your order.</p>
+        </div>
+
+        <div class="process-step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+        <div class="process-step reveal">
+          <div class="process-step-number">4</div>
+          <div class="process-step-icon"><i class="fa-solid fa-house-medical-circle-check"></i></div>
+          <h3>Delivered to Your Door</h3>
+          <p>Your medicines, test kits, or equipment arrive at your home, with full setup support where needed.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: CTA Band -->
+  <section class="cta-band reveal">
+    <div class="container">
+      <div class="cta-band-content">
+        <h2>Need Home Healthcare Today?</h2>
+        <p>Don't wait — our team is ready to bring trusted medical care straight to your doorstep in Mogappair and surrounding areas.</p>
+        <div class="cta-band-actions">
+          <a href="https://wa.me/917397391156" class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> WhatsApp Us
+          </a>
+          <a href="tel:9600123463" class="btn btn-outline-white">
+            <i class="fa-solid fa-phone"></i> Call Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo"><div class="fl-icon"><i class="fa-solid fa-plus"></i></div>Prithvi Clinic</div>
+          <p style="margin-bottom:6px;font-weight:600;color:rgba(255,255,255,0.9);">Your Health, Our Priority</p>
+          <p>Trusted healthcare in Mogappair since 2018.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <nav class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#specialties">Specialties</a>
+            <a href="diagnostics.html">Diagnostics</a>
+            <a href="homecare.html">Home Care</a>
+            <a href="index.html#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <nav class="footer-links">
+            <a href="services/general-medicine.html">General Medicine</a>
+            <a href="services/gynecology.html">Gynaecology</a>
+            <a href="services/neurology.html">Neurology</a>
+            <a href="homecare.html">Home Care</a>
+            <a href="diagnostics.html">Diagnostics</a>
+            <a href="blog/index.html">Blog</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><div><a href="tel:9600123463">96001 23463</a><br/><a href="tel:7397391156">7397391156</a></div></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:prithviclinic@gmail.com">prithviclinic@gmail.com</a></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>8 Thilakar St, Mogappair West, Chennai – 600037</span></div>
+          <a href="https://wa.me/917397391156" class="footer-wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2025 <span>Prithvi Clinic</span> · All Rights Reserved · Chennai</div></div>
+  </footer>
+
+  <!-- Floating Elements -->
+  <div class="float-wrap">
+    <button id="scrollTop" aria-label="Scroll to top"><i class="fa-solid fa-chevron-up"></i></button>
+    <div class="wa-float">
+      <div class="wa-pulse"></div>
+      <a href="https://wa.me/917397391156" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <div class="wa-tooltip">Chat with us</div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

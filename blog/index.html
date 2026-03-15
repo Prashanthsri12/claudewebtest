@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Health Blog | Prithvi Clinic</title>
+  <meta name="description" content="Expert health insights and medical tips from Prithvi Clinic's doctors on sleep, neurology, general wellness, and preventive care."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/styles.css"/>
+</head>
+<body>
+
+  <!-- Emergency Bar -->
+  <div id="emergency-bar">
+    <div class="container">
+      <div class="emergency-text">🚨 Emergency? Call us 24/7 — <a href="tel:9600123463">96001 23463</a></div>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon"><i class="fa-solid fa-plus"></i></div>
+        Prithvi Clinic
+      </a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#about">About</a>
+        <div class="nav-dropdown">
+          <button class="nav-drop-toggle">Services <i class="fa-solid fa-chevron-down fa-xs"></i></button>
+          <div class="nav-drop-menu">
+            <a href="../services/general-medicine.html"><i class="fa-solid fa-stethoscope"></i> General Medicine</a>
+            <a href="../services/gynecology.html"><i class="fa-solid fa-venus"></i> Gynecology</a>
+            <a href="../services/neurology.html"><i class="fa-solid fa-brain"></i> Neurology</a>
+          </div>
+        </div>
+        <a href="../diagnostics.html">Diagnostics</a>
+        <a href="../homecare.html">Home Care</a>
+        <a href="index.html" class="active">Blog</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+      <a href="../index.html#appointment" class="btn btn-primary nav-cta">
+        <i class="fa-regular fa-calendar-check"></i> Book Appointment
+      </a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="../index.html" onclick="closeMobileNav()">Home</a>
+    <a href="../index.html#about" onclick="closeMobileNav()">About</a>
+    <div class="mobile-divider"></div>
+    <a href="../services/general-medicine.html" onclick="closeMobileNav()">General Medicine</a>
+    <a href="../services/gynecology.html" onclick="closeMobileNav()">Gynecology</a>
+    <a href="../services/neurology.html" onclick="closeMobileNav()">Neurology</a>
+    <div class="mobile-divider"></div>
+    <a href="../diagnostics.html" onclick="closeMobileNav()">Diagnostics</a>
+    <a href="../homecare.html" onclick="closeMobileNav()">Home Care</a>
+    <a href="index.html" onclick="closeMobileNav()">Blog</a>
+    <a href="../index.html#contact" onclick="closeMobileNav()">Contact</a>
+    <a href="../index.html#appointment" class="btn btn-primary mobile-nav-cta" onclick="closeMobileNav()">Book Appointment</a>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-badge"><i class="fa-solid fa-newspaper"></i> Health Blog</div>
+      <h1>Health Insights &amp; Medical Tips</h1>
+      <p>Expert advice from Prithvi Clinic's doctors on sleep, neurology, and everyday wellness.</p>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <i class="fa-solid fa-chevron-right fa-xs"></i>
+        <span>Blog</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Blog Listing Section -->
+  <section class="section-pad" style="background:#fff;">
+    <div class="container">
+
+      <!-- Filter Buttons -->
+      <div class="blog-filters reveal">
+        <button class="filter-btn active" data-filter="all">All Posts</button>
+        <button class="filter-btn" data-filter="sleep">Sleep Health</button>
+        <button class="filter-btn" data-filter="general">General Health</button>
+        <button class="filter-btn" data-filter="neurology">Neurology</button>
+        <button class="filter-btn" data-filter="preventive">Preventive Care</button>
+      </div>
+
+      <!-- Featured Card -->
+      <div class="blog-featured reveal" data-cat="sleep">
+        <div class="blog-featured-thumb" style="background:linear-gradient(135deg,#0A3D62,#17A589);">
+          <span style="font-size:72px;">😴</span>
+        </div>
+        <div class="blog-featured-content">
+          <span class="blog-cat-badge" style="background:rgba(10,61,98,0.1);color:#0A3D62;">Sleep Health</span>
+          <div class="blog-meta">
+            <span><i class="fa-regular fa-calendar"></i> March 10, 2025</span>
+            <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+          </div>
+          <h3><a href="sleep-health.html">Why Sleep Matters More Than You Think</a></h3>
+          <p>Sleep is not just rest — it's when your body heals, your brain consolidates memories, and your immune system recharges. Here's why you can't afford to ignore it.</p>
+          <a href="sleep-health.html" class="btn btn-primary btn-sm">Read Article <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+        </div>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="blog-grid reveal">
+
+        <!-- Card 1 -->
+        <article class="blog-card" data-cat="general">
+          <div class="blog-card-thumb" style="background:linear-gradient(135deg,#17A589,#1abc9c);">
+            <span style="font-size:52px;">🏃</span>
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-cat-badge" style="background:rgba(23,165,137,0.1);color:#17A589;">General Health</span>
+            <div class="blog-meta">
+              <span><i class="fa-regular fa-calendar"></i> March 5, 2025</span>
+              <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+            </div>
+            <h3><a href="general-health-habits.html">10 General Health Habits That Could Add Years to Your Life</a></h3>
+            <p>Small daily choices compound over time. These ten science-backed habits can dramatically improve your health span.</p>
+            <a href="general-health-habits.html" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="blog-card" data-cat="neurology">
+          <div class="blog-card-thumb" style="background:linear-gradient(135deg,#1a237e,#0A3D62);">
+            <span style="font-size:52px;">🧠</span>
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-cat-badge" style="background:rgba(10,61,98,0.1);color:#0A3D62;">Neurology</span>
+            <div class="blog-meta">
+              <span><i class="fa-regular fa-calendar"></i> Feb 28, 2025</span>
+              <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+            </div>
+            <h3><a href="neurology-signs.html">Early Warning Signs of Neurological Disorders You Should Never Ignore</a></h3>
+            <p>Your brain sends signals when something is wrong. Learning to recognize early neurological warning signs can be life-saving.</p>
+            <a href="neurology-signs.html" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="blog-card" data-cat="general">
+          <div class="blog-card-thumb" style="background:linear-gradient(135deg,#c0392b,#e74c3c);">
+            <span style="font-size:52px;">❤️</span>
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-cat-badge" style="background:rgba(231,76,60,0.1);color:#c0392b;">General Health</span>
+            <div class="blog-meta">
+              <span><i class="fa-regular fa-calendar"></i> Feb 20, 2025</span>
+              <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+            </div>
+            <h3><a href="blood-pressure.html">The Silent Threat: Understanding and Managing High Blood Pressure</a></h3>
+            <p>Hypertension affects millions silently. Understand the risks, symptoms, and how to keep your blood pressure in check.</p>
+            <a href="blood-pressure.html" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="blog-card" data-cat="general">
+          <div class="blog-card-thumb" style="background:linear-gradient(135deg,#27ae60,#17A589);">
+            <span style="font-size:52px;">🌿</span>
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-cat-badge" style="background:rgba(39,174,96,0.1);color:#27ae60;">General Health</span>
+            <div class="blog-meta">
+              <span><i class="fa-regular fa-calendar"></i> Feb 15, 2025</span>
+              <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+            </div>
+            <h3><a href="immunity.html">Boost Your Immunity Naturally: Diet, Sleep &amp; Lifestyle Tips</a></h3>
+            <p>A strong immune system is your first line of defense. Here's how to naturally build it through food, sleep, and daily habits.</p>
+            <a href="immunity.html" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="blog-card" data-cat="preventive">
+          <div class="blog-card-thumb" style="background:linear-gradient(135deg,#7b1fa2,#0A3D62);">
+            <span style="font-size:52px;">🩺</span>
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-cat-badge" style="background:rgba(123,31,162,0.1);color:#7b1fa2;">Preventive Care</span>
+            <div class="blog-meta">
+              <span><i class="fa-regular fa-calendar"></i> Feb 8, 2025</span>
+              <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+            </div>
+            <h3><a href="health-checkups.html">Why Regular Health Checkups Can Save Your Life</a></h3>
+            <p>Prevention is better than cure. Find out what checkups you need at every stage of life and how early detection changes outcomes.</p>
+            <a href="health-checkups.html" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+          </div>
+        </article>
+
+      </div><!-- /.blog-grid -->
+    </div><!-- /.container -->
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo"><div class="fl-icon"><i class="fa-solid fa-plus"></i></div>Prithvi Clinic</div>
+          <p style="margin-bottom:6px;font-weight:600;color:rgba(255,255,255,0.9);">Your Health, Our Priority</p>
+          <p>Trusted healthcare in Mogappair since 2018.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <nav class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#specialties">Specialties</a>
+            <a href="../diagnostics.html">Diagnostics</a>
+            <a href="../homecare.html">Home Care</a>
+            <a href="../index.html#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <nav class="footer-links">
+            <a href="../services/general-medicine.html">General Medicine</a>
+            <a href="../services/gynecology.html">Gynaecology</a>
+            <a href="../services/neurology.html">Neurology</a>
+            <a href="../homecare.html">Home Care</a>
+            <a href="../diagnostics.html">Diagnostics</a>
+            <a href="index.html">Blog</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><div><a href="tel:9600123463">96001 23463</a><br/><a href="tel:7397391156">7397391156</a></div></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:prithviclinic@gmail.com">prithviclinic@gmail.com</a></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>8 Thilakar St, Mogappair West, Chennai – 600037</span></div>
+          <a href="https://wa.me/917397391156" class="footer-wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2025 <span>Prithvi Clinic</span> · All Rights Reserved · Chennai</div></div>
+  </footer>
+
+  <!-- Floating Elements -->
+  <div class="float-wrap">
+    <button id="scrollTop" aria-label="Scroll to top"><i class="fa-solid fa-chevron-up"></i></button>
+    <div class="wa-float">
+      <div class="wa-pulse"></div>
+      <a href="https://wa.me/917397391156" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <div class="wa-tooltip">Chat with us</div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Blog filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const featuredCard = document.querySelector('.blog-featured');
+    const blogCards = document.querySelectorAll('.blog-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+
+        // Handle featured card
+        if (filter === 'all' || featuredCard.getAttribute('data-cat') === filter) {
+          featuredCard.style.display = '';
+        } else {
+          featuredCard.style.display = 'none';
+        }
+
+        // Handle regular cards
+        blogCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-cat') === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

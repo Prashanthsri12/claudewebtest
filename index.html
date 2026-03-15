@@ -9,2013 +9,808 @@
   <meta property="og:title" content="Prithvi Clinic" />
   <meta property="og:description" content="Your Health, Our Priority — Expert care in Mogappair, Chennai" />
   <link rel="canonical" href="https://prithviclinic.com" />
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
+  <link rel="stylesheet" href="css/styles.css" />
   <style>
-    /* ============================================================
-       CSS CUSTOM PROPERTIES
-    ============================================================ */
-    :root {
-      --primary:    #0A3D62;
-      --secondary:  #17A589;
-      --accent:     #F0B429;
-      --bg:         #F8FAFC;
-      --bg-alt:     #EEF2F7;
-      --text-dark:  #1A202C;
-      --text-body:  #4A5568;
-      --white:      #FFFFFF;
-      --dark-footer:#0A1628;
-      --shadow-sm:  0 2px 8px rgba(10,61,98,0.08);
-      --shadow-md:  0 8px 30px rgba(10,61,98,0.12);
-      --shadow-lg:  0 20px 60px rgba(10,61,98,0.18);
-      --radius:     12px;
-      --radius-lg:  20px;
-      --transition: all 0.3s ease;
-    }
-
-    /* ============================================================
-       RESET & BASE
-    ============================================================ */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body {
-      font-family: 'Inter', sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--text-body);
-      background: var(--bg);
-      overflow-x: hidden;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      color: var(--text-dark);
-      line-height: 1.3;
-    }
-    h1 { font-size: clamp(36px, 5vw, 52px); font-weight: 800; }
-    h2 { font-size: clamp(26px, 3.5vw, 36px); font-weight: 700; }
-    h3 { font-size: clamp(18px, 2.5vw, 24px); font-weight: 600; }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
-    ul { list-style: none; }
-    button { cursor: pointer; border: none; outline: none; font-family: inherit; }
-    input, select, textarea { font-family: inherit; }
-    section { padding: 90px 0; }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* Buttons */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 28px;
-      border-radius: 50px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-weight: 600;
-      font-size: 15px;
-      transition: var(--transition);
-      cursor: pointer;
-    }
-    .btn-primary {
-      background: var(--secondary);
-      color: var(--white);
-      box-shadow: 0 4px 15px rgba(23,165,137,0.35);
-    }
-    .btn-primary:hover {
-      background: #13967a;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(23,165,137,0.45);
-    }
-    .btn-outline {
-      background: transparent;
-      color: var(--secondary);
-      border: 2px solid var(--secondary);
-    }
-    .btn-outline:hover {
-      background: var(--secondary);
-      color: var(--white);
-      transform: translateY(-2px);
-    }
-    .btn-accent {
-      background: var(--accent);
-      color: var(--text-dark);
-      box-shadow: 0 4px 15px rgba(240,180,41,0.35);
-    }
-    .btn-accent:hover {
-      background: #d9a020;
-      transform: translateY(-2px);
-    }
-
-    /* Section Labels */
-    .section-label {
-      display: inline-block;
-      background: rgba(23,165,137,0.1);
-      color: var(--secondary);
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 6px 16px;
-      border-radius: 50px;
-      margin-bottom: 16px;
-    }
-    .section-header {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-    .section-header p {
-      max-width: 540px;
-      margin: 16px auto 0;
-      color: var(--text-body);
-    }
-
-    /* Scroll Animations */
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
-
-    /* ============================================================
-       1. EMERGENCY BAR
-    ============================================================ */
-    #emergency-bar {
-      background: var(--primary);
-      color: var(--white);
-      padding: 10px 0;
-      font-size: 13px;
-      font-weight: 500;
-      position: relative;
-      z-index: 1001;
-    }
-    #emergency-bar .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    #emergency-bar .emergency-text a {
-      color: var(--accent);
-      font-weight: 700;
-    }
-    #emergency-bar .social-icons {
-      display: flex;
-      gap: 14px;
-    }
-    #emergency-bar .social-icons a {
-      color: rgba(255,255,255,0.75);
-      font-size: 14px;
-      transition: var(--transition);
-    }
-    #emergency-bar .social-icons a:hover { color: var(--white); }
-
-    /* ============================================================
-       2. NAVBAR
-    ============================================================ */
-    #navbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(10,61,98,0.06);
-      transition: var(--transition);
-    }
-    #navbar.scrolled {
-      background: rgba(255,255,255,0.97);
-      box-shadow: var(--shadow-md);
-    }
-    #navbar .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 16px;
-      padding-bottom: 16px;
-      gap: 24px;
-    }
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--primary);
-      white-space: nowrap;
-    }
-    .nav-logo .logo-icon {
-      width: 38px;
-      height: 38px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      font-size: 18px;
-      flex-shrink: 0;
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .nav-links a {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text-dark);
-      padding: 8px 14px;
-      border-radius: 8px;
-      position: relative;
-      transition: var(--transition);
-      white-space: nowrap;
-    }
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: 2px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 2px;
-      background: var(--secondary);
-      border-radius: 2px;
-      transition: var(--transition);
-    }
-    .nav-links a:hover, .nav-links a.active {
-      color: var(--secondary);
-    }
-    .nav-links a:hover::after, .nav-links a.active::after {
-      width: calc(100% - 28px);
-    }
-    .nav-cta { flex-shrink: 0; }
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 8px;
-      border-radius: 8px;
-      background: none;
-      transition: var(--transition);
-    }
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2.5px;
-      background: var(--primary);
-      border-radius: 2px;
-      transition: var(--transition);
-    }
-    .hamburger.active span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
-    .hamburger.active span:nth-child(2) { opacity: 0; }
-    .hamburger.active span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
-
-    /* Mobile Nav Overlay */
-    .mobile-nav {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: var(--primary);
-      z-index: 999;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    .mobile-nav.open {
-      display: flex;
-      opacity: 1;
-    }
-    .mobile-nav a {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--white);
-      padding: 12px 24px;
-      border-radius: 12px;
-      transition: var(--transition);
-    }
-    .mobile-nav a:hover { background: rgba(255,255,255,0.1); color: var(--accent); }
-    .mobile-nav .mobile-nav-cta { margin-top: 16px; }
-
-    /* ============================================================
-       3. HERO SECTION
-    ============================================================ */
+    /* ── Hero ─────────────────────────────────────────────── */
     #hero {
       min-height: calc(100vh - 88px);
-      background: linear-gradient(135deg, #f0f7ff 0%, var(--bg) 60%, #e8f8f5 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 80px 0 0;
-      position: relative;
-      overflow: hidden;
+      background: linear-gradient(135deg,#f0f7ff 0%,var(--bg) 60%,#e8f8f5 100%);
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 80px 0 0; position: relative; overflow: hidden;
     }
-    #hero::before {
-      content: '';
-      position: absolute;
-      top: -100px;
-      right: -100px;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(23,165,137,0.08) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-    #hero::after {
-      content: '';
-      position: absolute;
-      bottom: 50px;
-      left: -80px;
-      width: 350px;
-      height: 350px;
-      background: radial-gradient(circle, rgba(10,61,98,0.06) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 55% 45%;
-      align-items: center;
-      gap: 60px;
-      position: relative;
-      z-index: 1;
-    }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--white);
-      border: 1px solid rgba(23,165,137,0.25);
-      border-radius: 50px;
-      padding: 8px 18px;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--secondary);
-      margin-bottom: 24px;
-      box-shadow: var(--shadow-sm);
-    }
-    .hero-content h1 {
-      margin-bottom: 20px;
-      color: var(--primary);
-    }
-    .hero-content h1 span { color: var(--secondary); }
-    .hero-content p {
-      font-size: 18px;
-      color: var(--text-body);
-      max-width: 480px;
-      margin-bottom: 36px;
-      line-height: 1.8;
-    }
-    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+    #hero::before { content:''; position:absolute; top:-100px; right:-100px; width:500px; height:500px; background:radial-gradient(circle,rgba(23,165,137,.08) 0%,transparent 70%); border-radius:50%; }
+    #hero::after  { content:''; position:absolute; bottom:50px; left:-80px; width:350px; height:350px; background:radial-gradient(circle,rgba(10,61,98,.06) 0%,transparent 70%); border-radius:50%; }
+    .hero-inner { display:grid; grid-template-columns:55% 45%; align-items:center; gap:60px; position:relative; z-index:1; }
+    .hero-badge { display:inline-flex; align-items:center; gap:8px; background:var(--white); border:1px solid rgba(23,165,137,.25); border-radius:50px; padding:8px 18px; font-size:13px; font-weight:600; color:var(--secondary); margin-bottom:24px; box-shadow:var(--shadow-sm); }
+    .hero-content h1 { margin-bottom:20px; color:var(--primary); }
+    .hero-content h1 span { color:var(--secondary); }
+    .hero-content p { font-size:18px; color:var(--text-body); max-width:480px; margin-bottom:36px; line-height:1.8; }
+    .hero-buttons { display:flex; gap:16px; flex-wrap:wrap; }
+    .hero-visual { display:flex; align-items:center; justify-content:center; position:relative; }
+    .hero-svg-wrap { width:100%; max-width:480px; position:relative; }
+    .hero-svg-wrap svg { width:100%; height:auto; filter:drop-shadow(0 20px 40px rgba(10,61,98,.15)); }
+    .floating-card { position:absolute; background:var(--white); border-radius:14px; padding:12px 18px; box-shadow:var(--shadow-md); display:flex; align-items:center; gap:10px; font-size:13px; font-weight:600; color:var(--text-dark); animation:floatCard 4s ease-in-out infinite; }
+    .floating-card .fc-icon { width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0; }
+    .floating-card.card-1 { top:10%; left:-10%; animation-delay:0s; }
+    .floating-card.card-2 { bottom:15%; right:-5%; animation-delay:2s; }
+    @keyframes floatCard { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
 
-    /* Hero Visual */
-    .hero-visual {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-    .hero-svg-wrap {
-      width: 100%;
-      max-width: 480px;
-      position: relative;
-    }
-    .hero-svg-wrap svg {
-      width: 100%;
-      height: auto;
-      filter: drop-shadow(0 20px 40px rgba(10,61,98,0.15));
-    }
-    .floating-card {
-      position: absolute;
-      background: var(--white);
-      border-radius: 14px;
-      padding: 12px 18px;
-      box-shadow: var(--shadow-md);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-dark);
-      animation: floatCard 4s ease-in-out infinite;
-    }
-    .floating-card .fc-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      flex-shrink: 0;
-    }
-    .floating-card.card-1 { top: 10%; left: -10%; animation-delay: 0s; }
-    .floating-card.card-2 { bottom: 15%; right: -5%; animation-delay: 2s; }
-    @keyframes floatCard {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-    }
+    /* ── Stats Bar ────────────────────────────────────────── */
+    .stats-bar { background:var(--white); border-top:1px solid rgba(10,61,98,.06); margin-top:60px; padding:32px 0; box-shadow:var(--shadow-sm); }
+    .stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:center; }
+    .stat-item { position:relative; }
+    .stat-item:not(:last-child)::after { content:''; position:absolute; right:0; top:50%; transform:translateY(-50%); width:1px; height:50px; background:rgba(10,61,98,.1); }
+    .stat-number { font-family:'Plus Jakarta Sans',sans-serif; font-size:40px; font-weight:800; color:var(--primary); line-height:1; margin-bottom:6px; }
+    .stat-number span { color:var(--secondary); }
+    .stat-label { font-size:14px; font-weight:500; color:var(--text-body); }
+    .wave-divider { display:block; width:100%; line-height:0; margin-top:-2px; }
 
-    /* Stats Bar */
-    .stats-bar {
-      background: var(--white);
-      border-top: 1px solid rgba(10,61,98,0.06);
-      margin-top: 60px;
-      padding: 32px 0;
-      box-shadow: var(--shadow-sm);
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      text-align: center;
-    }
-    .stat-item { position: relative; }
-    .stat-item:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 1px;
-      height: 50px;
-      background: rgba(10,61,98,0.1);
-    }
-    .stat-number {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 40px;
-      font-weight: 800;
-      color: var(--primary);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-    .stat-number span { color: var(--secondary); }
-    .stat-label { font-size: 14px; font-weight: 500; color: var(--text-body); }
+    /* ── About ────────────────────────────────────────────── */
+    #about { background:var(--white); }
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; }
+    .about-image-wrap { aspect-ratio:4/3; background:linear-gradient(135deg,var(--primary) 0%,var(--secondary) 100%); border-radius:var(--radius-lg); position:relative; overflow:hidden; box-shadow:var(--shadow-lg); }
+    .about-image-wrap::before { content:''; position:absolute; inset:0; background:url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='25' cy='25' r='25'/%3E%3Ccircle cx='75' cy='75' r='25'/%3E%3C/g%3E%3C/svg%3E") repeat; }
+    .about-cross { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); opacity:.15; }
+    .about-cross svg { width:180px; height:180px; }
+    .about-overlay-text { position:absolute; bottom:28px; left:28px; right:28px; }
+    .about-overlay-badge { background:rgba(255,255,255,.15); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.3); border-radius:12px; padding:16px 20px; color:var(--white); }
+    .about-overlay-badge .aob-number { font-family:'Plus Jakarta Sans',sans-serif; font-size:36px; font-weight:800; color:var(--accent); line-height:1; }
+    .about-overlay-badge .aob-text { font-size:13px; opacity:.9; margin-top:4px; }
+    .about-content p { margin-bottom:16px; }
+    .about-features { margin:28px 0 32px; display:flex; flex-direction:column; gap:16px; }
+    .about-feature { display:flex; align-items:flex-start; gap:14px; }
+    .about-feature .af-icon { width:44px; height:44px; background:rgba(23,165,137,.1); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
+    .about-feature .af-text h4 { font-size:15px; font-weight:600; color:var(--text-dark); margin-bottom:2px; }
+    .about-feature .af-text p { font-size:14px; margin:0; }
 
-    /* Wave Divider */
-    .wave-divider { display: block; width: 100%; line-height: 0; margin-top: -2px; }
+    /* ── Specialties ──────────────────────────────────────── */
+    #specialties { background:var(--bg-alt); }
+    .specialties-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+    .specialty-card { background:var(--white); border-radius:var(--radius-lg); padding:40px 32px; box-shadow:var(--shadow-sm); border-top:4px solid transparent; transition:var(--transition); }
+    .specialty-card:hover { transform:translateY(-8px); box-shadow:var(--shadow-lg); border-top-color:var(--secondary); }
+    .specialty-icon { width:72px; height:72px; background:linear-gradient(135deg,rgba(10,61,98,.08),rgba(23,165,137,.12)); border-radius:var(--radius-lg); display:flex; align-items:center; justify-content:center; font-size:28px; color:var(--secondary); margin-bottom:24px; transition:var(--transition); }
+    .specialty-card:hover .specialty-icon { background:linear-gradient(135deg,var(--primary),var(--secondary)); color:var(--white); }
+    .specialty-card h3 { margin-bottom:12px; color:var(--primary); }
+    .specialty-card p { font-size:14px; margin-bottom:24px; }
+    .specialty-card .learn-more { color:var(--secondary); font-weight:600; font-size:14px; display:inline-flex; align-items:center; gap:6px; transition:var(--transition); }
+    .specialty-card .learn-more:hover { gap:10px; }
 
-    /* ============================================================
-       4. ABOUT SECTION
-    ============================================================ */
-    #about { background: var(--white); }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 72px;
-      align-items: center;
-    }
-    .about-image-wrap {
-      aspect-ratio: 4/3;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-      border-radius: var(--radius-lg);
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-    }
-    .about-image-wrap::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='25' cy='25' r='25'/%3E%3Ccircle cx='75' cy='75' r='25'/%3E%3C/g%3E%3C/svg%3E") repeat;
-    }
-    .about-cross {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0.15;
-    }
-    .about-cross svg { width: 180px; height: 180px; }
-    .about-overlay-text {
-      position: absolute;
-      bottom: 28px;
-      left: 28px;
-      right: 28px;
-    }
-    .about-overlay-badge {
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 12px;
-      padding: 16px 20px;
-      color: var(--white);
-    }
-    .about-overlay-badge .aob-number {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 36px;
-      font-weight: 800;
-      color: var(--accent);
-      line-height: 1;
-    }
-    .about-overlay-badge .aob-text { font-size: 13px; opacity: 0.9; margin-top: 4px; }
-    .about-content p { margin-bottom: 16px; color: var(--text-body); }
-    .about-features { margin: 28px 0 32px; display: flex; flex-direction: column; gap: 16px; }
-    .about-feature {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
-    .about-feature .af-icon {
-      width: 44px;
-      height: 44px;
-      background: rgba(23,165,137,0.1);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      flex-shrink: 0;
-    }
-    .about-feature .af-text h4 { font-size: 15px; font-weight: 600; color: var(--text-dark); margin-bottom: 2px; }
-    .about-feature .af-text p { font-size: 14px; margin: 0; }
+    /* ── Diagnostics ──────────────────────────────────────── */
+    #diagnostics { background:var(--primary); position:relative; overflow:hidden; }
+    #diagnostics::before { content:''; position:absolute; top:-200px; right:-200px; width:600px; height:600px; background:radial-gradient(circle,rgba(23,165,137,.1) 0%,transparent 60%); border-radius:50%; }
+    #diagnostics .section-header h2 { color:var(--white); }
+    #diagnostics .section-header p { color:rgba(255,255,255,.7); }
+    .diagnostics-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; position:relative; z-index:1; }
+    .diagnostic-tile { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius-lg); padding:32px 24px; text-align:center; transition:var(--transition); }
+    .diagnostic-tile:hover { background:rgba(255,255,255,.09); border-color:var(--secondary); box-shadow:0 0 25px rgba(23,165,137,.25); transform:scale(1.03); }
+    .diagnostic-tile .dt-icon { font-size:32px; color:var(--secondary); margin-bottom:16px; display:block; }
+    .diagnostic-tile h4 { font-size:15px; font-weight:600; color:var(--white); margin-bottom:8px; }
+    .diagnostic-tile p { font-size:13px; color:rgba(255,255,255,.6); }
 
-    /* ============================================================
-       5. SPECIALTIES SECTION
-    ============================================================ */
-    #specialties { background: var(--bg-alt); }
-    .specialties-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-    }
-    .specialty-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 40px 32px;
-      box-shadow: var(--shadow-sm);
-      border-top: 4px solid transparent;
-      transition: var(--transition);
-      cursor: default;
-    }
-    .specialty-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-lg);
-      border-top-color: var(--secondary);
-    }
-    .specialty-icon {
-      width: 72px;
-      height: 72px;
-      background: linear-gradient(135deg, rgba(10,61,98,0.08), rgba(23,165,137,0.12));
-      border-radius: var(--radius-lg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      color: var(--secondary);
-      margin-bottom: 24px;
-      transition: var(--transition);
-    }
-    .specialty-card:hover .specialty-icon {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: var(--white);
-    }
-    .specialty-card h3 { margin-bottom: 12px; color: var(--primary); }
-    .specialty-card p { font-size: 14px; color: var(--text-body); margin-bottom: 24px; }
-    .specialty-card .learn-more {
-      color: var(--secondary);
-      font-weight: 600;
-      font-size: 14px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: var(--transition);
-    }
-    .specialty-card .learn-more:hover { gap: 10px; }
+    /* ── Doctors ──────────────────────────────────────────── */
+    #doctors { background:var(--white); }
+    .doctors-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+    .doctor-card { background:var(--bg); border-radius:var(--radius-lg); padding:36px 28px; text-align:center; box-shadow:var(--shadow-sm); border-top:4px solid transparent; transition:var(--transition); }
+    .doctor-card:hover { transform:translateY(-8px); box-shadow:var(--shadow-lg); border-top-color:var(--secondary); background:var(--white); }
+    .doctor-avatar { width:96px; height:96px; border-radius:50%; background:linear-gradient(135deg,var(--primary),var(--secondary)); display:flex; align-items:center; justify-content:center; font-family:'Plus Jakarta Sans',sans-serif; font-size:28px; font-weight:800; color:var(--white); margin:0 auto 20px; box-shadow:0 8px 20px rgba(10,61,98,.2); }
+    .doctor-card h3 { font-size:19px; color:var(--primary); margin-bottom:4px; }
+    .doctor-quals { font-size:13px; color:var(--text-body); margin-bottom:14px; }
+    .doctor-badge { display:inline-block; background:rgba(23,165,137,.1); color:var(--secondary); font-size:12px; font-weight:600; padding:5px 14px; border-radius:50px; margin-bottom:14px; }
+    .doctor-desc { font-size:14px; color:var(--text-body); margin-bottom:24px; }
 
-    /* ============================================================
-       6. DIAGNOSTICS SECTION
-    ============================================================ */
-    #diagnostics {
-      background: var(--primary);
-      position: relative;
-      overflow: hidden;
-    }
-    #diagnostics::before {
-      content: '';
-      position: absolute;
-      top: -200px;
-      right: -200px;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(23,165,137,0.1) 0%, transparent 60%);
-      border-radius: 50%;
-    }
-    #diagnostics .section-header h2 { color: var(--white); }
-    #diagnostics .section-header p { color: rgba(255,255,255,0.7); }
-    #diagnostics .section-label {
-      background: rgba(23,165,137,0.2);
-      color: #5de8cc;
-    }
-    .diagnostics-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      position: relative;
-      z-index: 1;
-    }
-    .diagnostic-tile {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: var(--radius-lg);
-      padding: 32px 24px;
-      text-align: center;
-      transition: var(--transition);
-      cursor: default;
-    }
-    .diagnostic-tile:hover {
-      background: rgba(255,255,255,0.09);
-      border-color: var(--secondary);
-      box-shadow: 0 0 25px rgba(23,165,137,0.25);
-      transform: scale(1.03);
-    }
-    .diagnostic-tile .dt-icon {
-      font-size: 32px;
-      color: var(--secondary);
-      margin-bottom: 16px;
-      display: block;
-    }
-    .diagnostic-tile h4 {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 8px;
-    }
-    .diagnostic-tile p { font-size: 13px; color: rgba(255,255,255,0.6); }
+    /* ── Home Care ────────────────────────────────────────── */
+    #homecare-home { background:linear-gradient(135deg,#E8F8F5 0%,#D1F2EB 100%); }
+    .homecare-grid-home { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+    .homecare-card-home { background:var(--white); border-radius:var(--radius-lg); padding:36px 28px; box-shadow:var(--shadow-sm); transition:var(--transition); }
+    .homecare-card-home:hover { transform:translateY(-8px); box-shadow:var(--shadow-md); }
+    .homecare-icon-home { font-size:40px; margin-bottom:20px; display:block; }
+    .homecare-card-home h3 { color:var(--primary); margin-bottom:12px; }
+    .homecare-card-home p { font-size:14px; margin-bottom:20px; }
+    .homecare-card-home .learn-more { color:var(--secondary); font-weight:600; font-size:14px; display:inline-flex; align-items:center; gap:6px; transition:var(--transition); }
+    .homecare-card-home .learn-more:hover { gap:10px; }
 
-    /* ============================================================
-       7. DOCTORS SECTION
-    ============================================================ */
-    #doctors { background: var(--white); }
-    .doctors-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-    }
-    .doctor-card {
-      background: var(--bg);
-      border-radius: var(--radius-lg);
-      padding: 36px 28px;
-      text-align: center;
-      box-shadow: var(--shadow-sm);
-      border-top: 4px solid transparent;
-      transition: var(--transition);
-    }
-    .doctor-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-lg);
-      border-top-color: var(--secondary);
-      background: var(--white);
-    }
-    .doctor-avatar {
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--white);
-      margin: 0 auto 20px;
-      box-shadow: 0 8px 20px rgba(10,61,98,0.2);
-    }
-    .doctor-card h3 { font-size: 19px; color: var(--primary); margin-bottom: 4px; }
-    .doctor-quals { font-size: 13px; color: var(--text-body); margin-bottom: 14px; }
-    .doctor-badge {
-      display: inline-block;
-      background: rgba(23,165,137,0.1);
-      color: var(--secondary);
-      font-size: 12px;
-      font-weight: 600;
-      padding: 5px 14px;
-      border-radius: 50px;
-      margin-bottom: 14px;
-    }
-    .doctor-desc { font-size: 14px; color: var(--text-body); margin-bottom: 24px; }
-    .doctor-card .btn { width: 100%; justify-content: center; }
+    /* ── Appointment ──────────────────────────────────────── */
+    #appointment { background:var(--bg-alt); }
+    .appointment-grid { display:grid; grid-template-columns:1fr 1.3fr; gap:72px; align-items:start; }
+    .emergency-alert { background:linear-gradient(135deg,#fff5f5,#fff0eb); border:1px solid rgba(229,62,62,.2); border-left:4px solid #e53e3e; border-radius:var(--radius); padding:20px 24px; display:flex; align-items:center; gap:16px; }
+    .emergency-alert .ea-icon { font-size:28px; flex-shrink:0; }
+    .emergency-alert h4 { font-size:15px; color:#c53030; margin-bottom:4px; }
+    .emergency-alert a { color:#c53030; font-weight:700; font-size:18px; }
+    .form-card { background:var(--white); border-radius:var(--radius-lg); padding:40px; box-shadow:var(--shadow-md); }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .form-group { margin-bottom:20px; }
+    .form-group label { display:block; font-size:13px; font-weight:600; color:var(--text-dark); margin-bottom:8px; text-transform:uppercase; letter-spacing:.5px; }
+    .form-group input,.form-group select,.form-group textarea { width:100%; padding:12px 16px; border:1.5px solid #e2e8f0; border-radius:10px; font-size:15px; color:var(--text-dark); background:var(--bg); transition:var(--transition); appearance:none; }
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus { outline:none; border-color:var(--secondary); background:var(--white); box-shadow:0 0 0 3px rgba(23,165,137,.1); }
+    .form-group textarea { resize:vertical; min-height:100px; }
+    .form-group.hidden { display:none; }
+    .form-success { display:none; text-align:center; padding:40px 24px; }
+    .form-success .fs-icon { width:72px; height:72px; background:rgba(23,165,137,.1); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; color:var(--secondary); margin:0 auto 20px; }
+    .form-success h3 { color:var(--primary); margin-bottom:12px; }
 
-    /* ============================================================
-       8. HOME CARE SECTION
-    ============================================================ */
-    #homecare {
-      background: linear-gradient(135deg, #E8F8F5 0%, #D1F2EB 100%);
-    }
-    .homecare-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-    }
-    .homecare-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 36px 28px;
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition);
-    }
-    .homecare-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-md);
-    }
-    .homecare-icon {
-      font-size: 40px;
-      margin-bottom: 20px;
-      display: block;
-    }
-    .homecare-card h3 { color: var(--primary); margin-bottom: 12px; }
-    .homecare-card p { font-size: 14px; color: var(--text-body); margin-bottom: 20px; }
-    .homecare-card .learn-more {
-      color: var(--secondary);
-      font-weight: 600;
-      font-size: 14px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: var(--transition);
-    }
-    .homecare-card .learn-more:hover { gap: 10px; }
+    /* ── Contact ──────────────────────────────────────────── */
+    #contact { background:var(--white); }
+    .contact-grid { display:grid; grid-template-columns:1.2fr 1fr; gap:56px; align-items:start; }
+    .map-wrap { border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-md); height:420px; }
+    .map-wrap iframe { width:100%; height:100%; border:none; }
+    .contact-card { border-left:4px solid var(--secondary); background:var(--bg); border-radius:0 var(--radius-lg) var(--radius-lg) 0; padding:36px 32px; }
+    .contact-card h3 { color:var(--primary); margin-bottom:28px; font-size:20px; }
+    .contact-item { display:flex; align-items:flex-start; gap:14px; margin-bottom:22px; padding-bottom:22px; border-bottom:1px solid rgba(10,61,98,.06); }
+    .contact-item:last-of-type { border-bottom:none; }
+    .contact-item .ci-icon { width:42px; height:42px; background:rgba(23,165,137,.1); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:16px; color:var(--secondary); flex-shrink:0; }
+    .contact-item .ci-text strong { display:block; font-size:13px; font-weight:600; color:var(--text-dark); text-transform:uppercase; letter-spacing:.5px; margin-bottom:3px; }
+    .contact-item .ci-text span,.contact-item .ci-text a { font-size:15px; color:var(--text-body); display:block; }
+    .contact-item .ci-text a:hover { color:var(--secondary); }
+    .contact-socials { display:flex; gap:12px; margin-top:20px; }
+    .contact-socials a { width:40px; height:40px; background:var(--white); border:1.5px solid rgba(10,61,98,.1); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:16px; color:var(--primary); transition:var(--transition); }
+    .contact-socials a:hover { background:var(--secondary); color:var(--white); border-color:var(--secondary); }
 
-    /* ============================================================
-       9. APPOINTMENT SECTION
-    ============================================================ */
-    #appointment { background: var(--bg-alt); }
-    .appointment-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      gap: 72px;
-      align-items: start;
-    }
-    .appointment-info h2 { margin-bottom: 16px; }
-    .appointment-info > p { color: var(--text-body); margin-bottom: 32px; }
-    .emergency-alert {
-      background: linear-gradient(135deg, #fff5f5, #fff0eb);
-      border: 1px solid rgba(229,62,62,0.2);
-      border-left: 4px solid #e53e3e;
-      border-radius: var(--radius);
-      padding: 20px 24px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .emergency-alert .ea-icon {
-      font-size: 28px;
-      flex-shrink: 0;
-    }
-    .emergency-alert h4 { font-size: 15px; color: #c53030; margin-bottom: 4px; }
-    .emergency-alert a { color: #c53030; font-weight: 700; font-size: 18px; }
+    /* ── Blog Preview ─────────────────────────────────────── */
+    #blog-preview { background:var(--bg-alt); }
+    .blog-preview-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
 
-    /* Form */
-    .form-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 40px;
-      box-shadow: var(--shadow-md);
+    /* ── Responsive ───────────────────────────────────────── */
+    @media(max-width:900px){
+      .hero-inner,.about-grid,.appointment-grid,.contact-grid{ grid-template-columns:1fr; gap:40px; }
+      .hero-visual{ order:-1; max-width:380px; margin:0 auto; }
+      .hero-content h1,.hero-content p{ text-align:center; max-width:100%; }
+      .hero-badge{ margin:0 auto 24px; width:fit-content; display:flex; }
+      .hero-buttons{ justify-content:center; }
+      .specialties-grid,.doctors-grid,.homecare-grid-home,.blog-preview-grid{ grid-template-columns:repeat(2,1fr); }
+      .diagnostics-grid{ grid-template-columns:repeat(2,1fr); }
     }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .form-group { margin-bottom: 20px; }
-    .form-group label {
-      display: block;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-dark);
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+    @media(max-width:768px){
+      section{ padding:64px 0; }
+      .specialties-grid,.doctors-grid{ grid-template-columns:1fr; }
+      .homecare-grid-home,.blog-preview-grid{ grid-template-columns:1fr; }
+      .diagnostics-grid{ grid-template-columns:1fr 1fr; }
+      .form-row{ grid-template-columns:1fr; }
+      .stats-grid{ grid-template-columns:repeat(2,1fr); }
+      .stat-item:nth-child(2)::after{ display:none; }
     }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px 16px;
-      border: 1.5px solid #e2e8f0;
-      border-radius: 10px;
-      font-size: 15px;
-      color: var(--text-dark);
-      background: var(--bg);
-      transition: var(--transition);
-      appearance: none;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--secondary);
-      background: var(--white);
-      box-shadow: 0 0 0 3px rgba(23,165,137,0.1);
-    }
-    .form-group textarea { resize: vertical; min-height: 100px; }
-    .form-group.hidden { display: none; }
-    .form-submit { width: 100%; padding: 16px; font-size: 16px; border-radius: 12px; }
-    .form-success {
-      display: none;
-      text-align: center;
-      padding: 40px 24px;
-    }
-    .form-success .fs-icon {
-      width: 72px;
-      height: 72px;
-      background: rgba(23,165,137,0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      color: var(--secondary);
-      margin: 0 auto 20px;
-    }
-    .form-success h3 { color: var(--primary); margin-bottom: 12px; }
-    .form-success p { color: var(--text-body); }
-
-    /* ============================================================
-       10. CONTACT / LOCATION
-    ============================================================ */
-    #contact { background: var(--white); }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 56px;
-      align-items: start;
-    }
-    .map-wrap {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-      height: 420px;
-    }
-    .map-wrap iframe { width: 100%; height: 100%; border: none; }
-    .contact-card {
-      border-left: 4px solid var(--secondary);
-      background: var(--bg);
-      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-      padding: 36px 32px;
-    }
-    .contact-card h3 { color: var(--primary); margin-bottom: 28px; font-size: 20px; }
-    .contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      margin-bottom: 22px;
-      padding-bottom: 22px;
-      border-bottom: 1px solid rgba(10,61,98,0.06);
-    }
-    .contact-item:last-of-type { border-bottom: none; }
-    .contact-item .ci-icon {
-      width: 42px;
-      height: 42px;
-      background: rgba(23,165,137,0.1);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      color: var(--secondary);
-      flex-shrink: 0;
-    }
-    .contact-item .ci-text strong { display: block; font-size: 13px; font-weight: 600; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
-    .contact-item .ci-text span, .contact-item .ci-text a { font-size: 15px; color: var(--text-body); display: block; }
-    .contact-item .ci-text a:hover { color: var(--secondary); }
-    .contact-socials { display: flex; gap: 12px; margin-top: 20px; }
-    .contact-socials a {
-      width: 40px;
-      height: 40px;
-      background: var(--white);
-      border: 1.5px solid rgba(10,61,98,0.1);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      color: var(--primary);
-      transition: var(--transition);
-    }
-    .contact-socials a:hover { background: var(--secondary); color: var(--white); border-color: var(--secondary); }
-
-    /* ============================================================
-       11. FOOTER
-    ============================================================ */
-    #footer {
-      background: var(--dark-footer);
-      color: rgba(255,255,255,0.7);
-      border-top: 3px solid var(--secondary);
-      padding: 72px 0 0;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.8fr 1fr 1fr 1.5fr;
-      gap: 48px;
-      padding-bottom: 56px;
-    }
-    .footer-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--white);
-      margin-bottom: 16px;
-    }
-    .footer-logo .fl-icon {
-      width: 38px;
-      height: 38px;
-      background: linear-gradient(135deg, var(--secondary), #0ea57a);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      color: var(--white);
-    }
-    .footer-col p { font-size: 14px; line-height: 1.8; }
-    .footer-col h4 {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 20px;
-      letter-spacing: 0.3px;
-    }
-    .footer-links { display: flex; flex-direction: column; gap: 10px; }
-    .footer-links a { font-size: 14px; transition: var(--transition); display: flex; align-items: center; gap: 6px; }
-    .footer-links a::before { content: '›'; color: var(--secondary); font-size: 16px; }
-    .footer-links a:hover { color: var(--white); padding-left: 4px; }
-    .footer-contact-item { display: flex; gap: 10px; margin-bottom: 14px; font-size: 14px; }
-    .footer-contact-item i { color: var(--secondary); margin-top: 3px; flex-shrink: 0; }
-    .footer-contact-item a:hover { color: var(--secondary); }
-    .footer-wa-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #25D366;
-      color: var(--white);
-      padding: 12px 20px;
-      border-radius: 50px;
-      font-size: 14px;
-      font-weight: 600;
-      margin-top: 16px;
-      transition: var(--transition);
-    }
-    .footer-wa-btn:hover { background: #1ebe5d; transform: translateY(-2px); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.07);
-      padding: 24px 0;
-      text-align: center;
-      font-size: 13px;
-    }
-    .footer-bottom span { color: var(--secondary); }
-
-    /* ============================================================
-       FLOATING ELEMENTS
-    ============================================================ */
-    .float-wrap {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      z-index: 9999;
-    }
-    /* Scroll to top */
-    #scrollTop {
-      width: 46px;
-      height: 46px;
-      background: var(--secondary);
-      color: var(--white);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      box-shadow: var(--shadow-md);
-      cursor: pointer;
-      transition: var(--transition);
-      opacity: 0;
-      transform: translateY(20px);
-      pointer-events: none;
-    }
-    #scrollTop.visible {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: all;
-    }
-    #scrollTop:hover { background: #13967a; transform: translateY(-3px); }
-
-    /* WhatsApp */
-    .wa-float {
-      position: relative;
-      width: 56px;
-      height: 56px;
-    }
-    .wa-float a {
-      width: 56px;
-      height: 56px;
-      background: #25D366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      color: var(--white);
-      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-      transition: var(--transition);
-      position: relative;
-      z-index: 2;
-    }
-    .wa-float a:hover { transform: scale(1.1); }
-    .wa-pulse {
-      position: absolute;
-      inset: -6px;
-      border-radius: 50%;
-      background: rgba(37,211,102,0.25);
-      animation: waPulse 2.5s ease-out infinite;
-    }
-    .wa-pulse::after {
-      content: '';
-      position: absolute;
-      inset: 6px;
-      border-radius: 50%;
-      background: rgba(37,211,102,0.15);
-      animation: waPulse 2.5s ease-out infinite 0.8s;
-    }
-    @keyframes waPulse {
-      0% { transform: scale(1); opacity: 1; }
-      100% { transform: scale(1.5); opacity: 0; }
-    }
-    .wa-tooltip {
-      position: absolute;
-      right: calc(100% + 12px);
-      top: 50%;
-      transform: translateY(-50%);
-      background: var(--text-dark);
-      color: var(--white);
-      font-size: 12px;
-      font-weight: 600;
-      padding: 6px 12px;
-      border-radius: 8px;
-      white-space: nowrap;
-      opacity: 0;
-      pointer-events: none;
-      transition: var(--transition);
-    }
-    .wa-tooltip::after {
-      content: '';
-      position: absolute;
-      left: 100%;
-      top: 50%;
-      transform: translateY(-50%);
-      border: 6px solid transparent;
-      border-left-color: var(--text-dark);
-    }
-    .wa-float:hover .wa-tooltip { opacity: 1; }
-
-    /* ============================================================
-       RESPONSIVE
-    ============================================================ */
-    @media (max-width: 1024px) {
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
-    }
-
-    @media (max-width: 900px) {
-      .about-grid,
-      .appointment-grid,
-      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-      .hero-visual { order: -1; max-width: 380px; margin: 0 auto; }
-      .hero-content h1 { text-align: center; }
-      .hero-content p { text-align: center; max-width: 100%; }
-      .hero-badge { display: flex; margin: 0 auto 24px; width: fit-content; }
-      .hero-buttons { justify-content: center; }
-      .specialties-grid,
-      .doctors-grid,
-      .homecare-grid { grid-template-columns: repeat(2, 1fr); }
-      .diagnostics-grid { grid-template-columns: repeat(2, 1fr); }
-      #hero { padding-top: 60px; }
-    }
-
-    @media (max-width: 768px) {
-      section { padding: 64px 0; }
-      .nav-links, .nav-cta { display: none; }
-      .hamburger { display: flex; }
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        overflow-x: auto;
-      }
-      .stat-item:nth-child(2)::after { display: none; }
-      .specialties-grid,
-      .doctors-grid { grid-template-columns: 1fr; }
-      .homecare-grid { grid-template-columns: 1fr; }
-      .diagnostics-grid { grid-template-columns: 1fr 1fr; }
-      .about-grid { grid-template-columns: 1fr; }
-      .appointment-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (max-width: 480px) {
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .stat-item::after { display: none; }
-      .diagnostics-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .hero-buttons { flex-direction: column; align-items: center; }
-      .hero-buttons .btn { width: 100%; justify-content: center; max-width: 280px; }
-      #emergency-bar .container { justify-content: center; }
-      .form-card { padding: 24px 20px; }
-      .float-wrap { bottom: 16px; right: 16px; }
+    @media(max-width:480px){
+      .stats-grid{ grid-template-columns:repeat(2,1fr); }
+      .stat-item::after{ display:none; }
+      .diagnostics-grid{ grid-template-columns:1fr; }
+      .hero-buttons{ flex-direction:column; align-items:center; }
+      .hero-buttons .btn{ width:100%; justify-content:center; max-width:280px; }
+      .form-card{ padding:24px 20px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ============================================================
-       1. EMERGENCY BAR
-  ============================================================ -->
-  <div id="emergency-bar">
-    <div class="container">
-      <div class="emergency-text">
-        🚨 Emergency? Call us 24/7 — <a href="tel:9600123463">96001 23463</a>
-      </div>
-      <div class="social-icons">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      </div>
+<!-- ── Emergency Bar ──────────────────────────────────── -->
+<div id="emergency-bar">
+  <div class="container">
+    <div class="emergency-text">🚨 Emergency? Call us 24/7 — <a href="tel:9600123463">96001 23463</a></div>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
     </div>
   </div>
+</div>
 
-  <!-- ============================================================
-       2. NAVBAR
-  ============================================================ -->
-  <nav id="navbar">
-    <div class="container">
-      <a href="#hero" class="nav-logo">
-        <div class="logo-icon"><i class="fa-solid fa-plus"></i></div>
-        Prithvi Clinic
-      </a>
-
-      <div class="nav-links">
-        <a href="#hero" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#specialties">Specialties</a>
-        <a href="#diagnostics">Diagnostics</a>
-        <a href="#homecare">Home Care</a>
-        <a href="#contact">Contact</a>
+<!-- ── Navbar ─────────────────────────────────────────── -->
+<nav id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon"><i class="fa-solid fa-plus"></i></div>
+      Prithvi Clinic
+    </a>
+    <div class="nav-links">
+      <a href="#hero" class="active">Home</a>
+      <a href="#about">About</a>
+      <div class="nav-dropdown">
+        <button class="nav-drop-toggle">Services <i class="fa-solid fa-chevron-down fa-xs"></i></button>
+        <div class="nav-drop-menu">
+          <a href="services/general-medicine.html"><i class="fa-solid fa-stethoscope"></i> General Medicine</a>
+          <a href="services/gynecology.html"><i class="fa-solid fa-venus"></i> Gynecology</a>
+          <a href="services/neurology.html"><i class="fa-solid fa-brain"></i> Neurology</a>
+        </div>
       </div>
-
-      <a href="#appointment" class="btn btn-primary nav-cta">
-        <i class="fa-regular fa-calendar-check"></i> Book Appointment
-      </a>
-
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="diagnostics.html">Diagnostics</a>
+      <a href="homecare.html">Home Care</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="#contact">Contact</a>
     </div>
-  </nav>
-
-  <!-- Mobile Nav -->
-  <div class="mobile-nav" id="mobileNav">
-    <a href="#hero" onclick="closeMobileNav()">Home</a>
-    <a href="#about" onclick="closeMobileNav()">About</a>
-    <a href="#specialties" onclick="closeMobileNav()">Specialties</a>
-    <a href="#diagnostics" onclick="closeMobileNav()">Diagnostics</a>
-    <a href="#homecare" onclick="closeMobileNav()">Home Care</a>
-    <a href="#contact" onclick="closeMobileNav()">Contact</a>
-    <a href="#appointment" class="btn btn-primary mobile-nav-cta" onclick="closeMobileNav()">Book Appointment</a>
-  </div>
-
-  <!-- ============================================================
-       3. HERO SECTION
-  ============================================================ -->
-  <section id="hero">
-    <div class="container">
-      <div class="hero-inner">
-
-        <div class="hero-content reveal">
-          <div class="hero-badge">
-            <i class="fa-solid fa-location-dot"></i> Mogappair, Chennai
-          </div>
-          <h1>Your Health,<br><span>Our Priority</span></h1>
-          <p>Expert doctors, compassionate care, and modern diagnostics — all in the heart of Mogappair.</p>
-          <div class="hero-buttons">
-            <a href="#appointment" class="btn btn-primary">
-              <i class="fa-regular fa-calendar-check"></i> Book Appointment
-            </a>
-            <a href="#specialties" class="btn btn-outline">
-              Our Services <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="hero-visual reveal reveal-delay-2">
-          <div class="hero-svg-wrap">
-            <!-- Medical Illustration SVG -->
-            <svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" aria-label="Medical illustration">
-              <defs>
-                <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style="stop-color:#e8f4fd"/>
-                  <stop offset="100%" style="stop-color:#d1f2eb"/>
-                </linearGradient>
-                <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style="stop-color:#0A3D62"/>
-                  <stop offset="100%" style="stop-color:#1a6fa3"/>
-                </linearGradient>
-                <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style="stop-color:#17A589"/>
-                  <stop offset="100%" style="stop-color:#1abc9c"/>
-                </linearGradient>
-                <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style="stop-color:#f4c7a7"/>
-                  <stop offset="100%" style="stop-color:#e8a882"/>
-                </linearGradient>
-              </defs>
-              <!-- Background circle -->
-              <circle cx="240" cy="210" r="190" fill="url(#bgGrad)" />
-              <!-- Decorative rings -->
-              <circle cx="240" cy="210" r="190" fill="none" stroke="#17A589" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.3"/>
-              <circle cx="240" cy="210" r="160" fill="none" stroke="#0A3D62" stroke-width="1" stroke-dasharray="4 8" opacity="0.15"/>
-
-              <!-- Doctor body -->
-              <rect x="155" y="210" width="90" height="130" rx="8" fill="url(#blueGrad)"/>
-              <!-- Doctor coat lapels -->
-              <polygon points="200,210 175,230 185,260 200,245" fill="white" opacity="0.9"/>
-              <polygon points="200,210 225,230 215,260 200,245" fill="white" opacity="0.9"/>
-              <!-- Stethoscope -->
-              <path d="M180 230 Q170 270 175 285 Q180 295 190 295 Q200 295 205 285" fill="none" stroke="#F0B429" stroke-width="3.5" stroke-linecap="round"/>
-              <circle cx="192" cy="298" r="7" fill="#F0B429"/>
-              <!-- Doctor head -->
-              <ellipse cx="200" cy="190" rx="32" ry="36" fill="url(#skinGrad)"/>
-              <!-- Hair -->
-              <ellipse cx="200" cy="163" rx="33" ry="18" fill="#2d1b10"/>
-              <ellipse cx="200" cy="168" rx="28" ry="10" fill="#3d2515"/>
-              <!-- Eyes -->
-              <ellipse cx="190" cy="188" rx="5" ry="6" fill="white"/>
-              <ellipse cx="210" cy="188" rx="5" ry="6" fill="white"/>
-              <circle cx="191" cy="189" r="3" fill="#1a1a2e"/>
-              <circle cx="211" cy="189" r="3" fill="#1a1a2e"/>
-              <!-- Smile -->
-              <path d="M192 200 Q200 208 208 200" fill="none" stroke="#c07850" stroke-width="2" stroke-linecap="round"/>
-              <!-- Doctor arms -->
-              <rect x="130" y="215" width="28" height="65" rx="14" fill="url(#blueGrad)"/>
-              <rect x="242" y="215" width="28" height="65" rx="14" fill="url(#blueGrad)"/>
-              <!-- Hands -->
-              <ellipse cx="144" cy="284" rx="14" ry="12" fill="url(#skinGrad)"/>
-              <ellipse cx="256" cy="284" rx="14" ry="12" fill="url(#skinGrad)"/>
-
-              <!-- Patient (sitting) -->
-              <rect x="270" y="248" width="80" height="100" rx="8" fill="#e8f4fd" stroke="#b8d8f0" stroke-width="1.5"/>
-              <!-- Patient head -->
-              <ellipse cx="310" cy="230" rx="28" ry="30" fill="url(#skinGrad)"/>
-              <ellipse cx="310" cy="208" rx="28" ry="14" fill="#8B4513"/>
-              <!-- Patient eyes -->
-              <ellipse cx="302" cy="228" rx="4.5" ry="5" fill="white"/>
-              <ellipse cx="318" cy="228" rx="4.5" ry="5" fill="white"/>
-              <circle cx="303" cy="229" r="2.5" fill="#1a1a2e"/>
-              <circle cx="319" cy="229" r="2.5" fill="#1a1a2e"/>
-              <!-- Smile -->
-              <path d="M303 240 Q310 247 317 240" fill="none" stroke="#c07850" stroke-width="2" stroke-linecap="round"/>
-              <!-- Patient arms -->
-              <rect x="255" y="255" width="22" height="55" rx="11" fill="#e8f4fd" stroke="#b8d8f0" stroke-width="1"/>
-              <rect x="323" y="255" width="22" height="55" rx="11" fill="#e8f4fd" stroke="#b8d8f0" stroke-width="1"/>
-
-              <!-- Medical cross symbol (center-top) -->
-              <rect x="216" y="60" width="48" height="16" rx="5" fill="url(#tealGrad)" opacity="0.9"/>
-              <rect x="228" y="48" width="16" height="40" rx="5" fill="url(#tealGrad)" opacity="0.9"/>
-
-              <!-- Clipboard -->
-              <rect x="218" y="270" width="44" height="58" rx="6" fill="white" stroke="#c5dce8" stroke-width="1.5"/>
-              <rect x="226" y="263" width="28" height="12" rx="4" fill="#c5dce8"/>
-              <line x1="226" y1="285" x2="254" y2="285" stroke="#a0b4c0" stroke-width="2"/>
-              <line x1="226" y1="293" x2="254" y2="293" stroke="#a0b4c0" stroke-width="2"/>
-              <line x1="226" y1="301" x2="244" y2="301" stroke="#a0b4c0" stroke-width="2"/>
-
-              <!-- Heartbeat line decoration -->
-              <polyline points="50,320 80,320 95,290 115,350 135,295 155,320 185,320" fill="none" stroke="#17A589" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
-              <polyline points="295,380 325,380 340,355 360,400 380,360 400,380 430,380" fill="none" stroke="#0A3D62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
-
-              <!-- Floating pills -->
-              <rect x="55" y="140" width="30" height="14" rx="7" fill="#17A589" opacity="0.7"/>
-              <line x1="70" y1="140" x2="70" y2="154" stroke="white" stroke-width="1.5" opacity="0.8"/>
-              <rect x="385" y="170" width="30" height="14" rx="7" fill="#F0B429" opacity="0.7"/>
-              <line x1="400" y1="170" x2="400" y2="184" stroke="white" stroke-width="1.5" opacity="0.8"/>
-
-              <!-- Stars / sparkles -->
-              <text x="68" y="95" font-size="18" fill="#F0B429" opacity="0.8">✦</text>
-              <text x="385" y="115" font-size="14" fill="#17A589" opacity="0.7">✦</text>
-              <text x="410" y="280" font-size="10" fill="#0A3D62" opacity="0.5">✦</text>
-            </svg>
-
-            <!-- Floating info cards -->
-            <div class="floating-card card-1">
-              <div class="fc-icon" style="background:rgba(23,165,137,0.1);color:var(--secondary);">
-                <i class="fa-solid fa-user-doctor"></i>
-              </div>
-              <div>
-                <div style="font-size:11px;color:var(--text-body);font-weight:500;">Specialists</div>
-                <div>3 Expert Doctors</div>
-              </div>
-            </div>
-            <div class="floating-card card-2">
-              <div class="fc-icon" style="background:rgba(240,180,41,0.1);color:var(--accent);">
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div>
-                <div style="font-size:11px;color:var(--text-body);font-weight:500;">Experience</div>
-                <div>5+ Years of Care</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- .hero-inner -->
-    </div><!-- .container -->
-
-    <!-- Stats Bar -->
-    <div class="stats-bar">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-item reveal">
-            <div class="stat-number"><span class="counter" data-target="5">0</span>+</div>
-            <div class="stat-label">Years of Service</div>
-          </div>
-          <div class="stat-item reveal reveal-delay-1">
-            <div class="stat-number"><span class="counter" data-target="3">0</span></div>
-            <div class="stat-label">Specialists</div>
-          </div>
-          <div class="stat-item reveal reveal-delay-2">
-            <div class="stat-number"><span class="counter" data-target="10">0</span>+</div>
-            <div class="stat-label">Diagnostic Services</div>
-          </div>
-          <div class="stat-item reveal reveal-delay-3">
-            <div class="stat-number"><span class="counter" data-target="1000">0</span>+</div>
-            <div class="stat-label">Patients Served</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Wave Divider -->
-    <svg class="wave-divider" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff"/>
-    </svg>
-
-  </section>
-
-  <!-- ============================================================
-       4. ABOUT SECTION
-  ============================================================ -->
-  <section id="about">
-    <div class="container">
-      <div class="about-grid">
-
-        <div class="about-image-wrap reveal">
-          <div class="about-cross">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="35" y="10" width="30" height="80" rx="6" fill="white"/>
-              <rect x="10" y="35" width="80" height="30" rx="6" fill="white"/>
-            </svg>
-          </div>
-          <div class="about-overlay-text">
-            <div class="about-overlay-badge">
-              <div class="aob-number">5+</div>
-              <div class="aob-text">Years of Trusted Healthcare in Mogappair</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-content reveal reveal-delay-1">
-          <span class="section-label">About Us</span>
-          <h2>Trusted Care in the Heart of Mogappair</h2>
-          <p>Prithvi Clinic has been serving the residents of Mogappair, Chennai since 2018. We are committed to providing accessible, high-quality healthcare with a patient-first philosophy at the core of everything we do.</p>
-          <p>Our clinic brings together experienced specialists across General &amp; Emergency Medicine, Gynecology &amp; Obstetrics, and Advanced Neurology — equipped with clinical-level diagnostic facilities to ensure accurate, timely, and effective treatment.</p>
-
-          <div class="about-features">
-            <div class="about-feature">
-              <div class="af-icon">🩺</div>
-              <div class="af-text">
-                <h4>Experienced Specialists</h4>
-                <p>Board-certified doctors with decades of combined expertise across multiple disciplines.</p>
-              </div>
-            </div>
-            <div class="about-feature">
-              <div class="af-icon">🏠</div>
-              <div class="af-text">
-                <h4>Home Care Services</h4>
-                <p>Medicines, investigations, and medical equipment delivered right to your doorstep.</p>
-              </div>
-            </div>
-            <div class="about-feature">
-              <div class="af-icon">🔬</div>
-              <div class="af-text">
-                <h4>Advanced Diagnostics</h4>
-                <p>State-of-the-art diagnostic tools including EEG, EMG, Sleep Study, Holter, and more.</p>
-              </div>
-            </div>
-          </div>
-
-          <a href="#appointment" class="btn btn-primary">Book a Consultation</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       5. SPECIALTIES SECTION
-  ============================================================ -->
-  <section id="specialties">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">What We Treat</span>
-        <h2>Our Medical Specialties</h2>
-        <p>Comprehensive, multi-specialty healthcare delivered by expert physicians in a compassionate environment.</p>
-      </div>
-
-      <div class="specialties-grid">
-        <div class="specialty-card reveal">
-          <div class="specialty-icon"><i class="fa-solid fa-stethoscope"></i></div>
-          <h3>General &amp; Emergency Medicine</h3>
-          <p>Diagnosis and treatment of internal diseases with 24/7 emergency care readiness for acute and critical conditions.</p>
-          <a href="#appointment" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="specialty-card reveal reveal-delay-1">
-          <div class="specialty-icon"><i class="fa-solid fa-venus"></i></div>
-          <h3>Gynecology &amp; Obstetrics</h3>
-          <p>Comprehensive women's health, prenatal care, and obstetric surgical expertise with a focus on safe and informed delivery.</p>
-          <a href="#appointment" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="specialty-card reveal reveal-delay-2">
-          <div class="specialty-icon"><i class="fa-solid fa-brain"></i></div>
-          <h3>Advanced Neurology</h3>
-          <p>Diagnosis and treatment of brain, spine, and nervous system disorders with cutting-edge neurological diagnostic tools.</p>
-          <a href="#appointment" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       6. DIAGNOSTICS SECTION
-  ============================================================ -->
-  <section id="diagnostics">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Diagnostics</span>
-        <h2>Comprehensive Diagnostic Services</h2>
-        <p>State-of-the-art diagnostic tools for accurate, timely results — all under one roof.</p>
-      </div>
-
-      <div class="diagnostics-grid">
-        <div class="diagnostic-tile reveal">
-          <i class="fa-solid fa-moon dt-icon"></i>
-          <h4>Sleep Study</h4>
-          <p>Detailed analysis of sleep disorders and patterns.</p>
-        </div>
-        <div class="diagnostic-tile reveal reveal-delay-1">
-          <i class="fa-solid fa-wave-square dt-icon"></i>
-          <h4>EEG</h4>
-          <p>Electroencephalogram for brain activity monitoring.</p>
-        </div>
-        <div class="diagnostic-tile reveal reveal-delay-2">
-          <i class="fa-solid fa-bolt dt-icon"></i>
-          <h4>EMG</h4>
-          <p>Electromyography for muscle &amp; nerve evaluation.</p>
-        </div>
-        <div class="diagnostic-tile reveal">
-          <i class="fa-solid fa-network-wired dt-icon"></i>
-          <h4>NCS</h4>
-          <p>Nerve Conduction Study for peripheral neuropathy.</p>
-        </div>
-        <div class="diagnostic-tile reveal reveal-delay-1">
-          <i class="fa-solid fa-lungs dt-icon"></i>
-          <h4>BiPAP / CPAP</h4>
-          <p>Non-invasive ventilation therapy for sleep apnea.</p>
-        </div>
-        <div class="diagnostic-tile reveal reveal-delay-2">
-          <i class="fa-solid fa-heart-pulse dt-icon"></i>
-          <h4>24Hr Ambulatory BP Monitor</h4>
-          <p>Round-the-clock blood pressure tracking and analysis.</p>
-        </div>
-        <div class="diagnostic-tile reveal">
-          <i class="fa-solid fa-wind dt-icon"></i>
-          <h4>Pulmonary Function Test</h4>
-          <p>Assessment of lung capacity and breathing efficiency.</p>
-        </div>
-        <div class="diagnostic-tile reveal reveal-delay-1">
-          <i class="fa-solid fa-heartbeat dt-icon"></i>
-          <h4>24Hr Holter Monitor</h4>
-          <p>Continuous ECG recording to detect cardiac arrhythmias.</p>
-        </div>
-        <div class="diagnostic-tile reveal reveal-delay-2">
-          <i class="fa-solid fa-ear-listen dt-icon"></i>
-          <h4>Audiometry</h4>
-          <p>Comprehensive hearing assessment and audiological testing.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       7. DOCTORS SECTION
-  ============================================================ -->
-  <section id="doctors">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Our Team</span>
-        <h2>Meet Our Specialists</h2>
-        <p>Qualified, caring professionals dedicated to your health and well-being.</p>
-      </div>
-
-      <div class="doctors-grid">
-        <div class="doctor-card reveal">
-          <div class="doctor-avatar">RP</div>
-          <h3>Dr. R. Prithviraj</h3>
-          <p class="doctor-quals">M.B.B.S., M.E.M.</p>
-          <span class="doctor-badge">General &amp; Emergency Medicine</span>
-          <p class="doctor-desc">Expert in emergency care and internal medicine with a commitment to rapid, accurate diagnosis.</p>
-          <a href="#appointment" class="btn btn-primary">Book Appointment</a>
-        </div>
-        <div class="doctor-card reveal reveal-delay-1">
-          <div class="doctor-avatar">SP</div>
-          <h3>Dr. S.V. Priyanka</h3>
-          <p class="doctor-quals">M.B.B.S., M.S.(OBG), R.C.D.</p>
-          <span class="doctor-badge">Gynecology &amp; Obstetrics</span>
-          <p class="doctor-desc">Dedicated women's health specialist with extensive obstetric surgical training and prenatal expertise.</p>
-          <a href="#appointment" class="btn btn-primary">Book Appointment</a>
-        </div>
-        <div class="doctor-card reveal reveal-delay-2">
-          <div class="doctor-avatar">KS</div>
-          <h3>Dr. K. Sankara Subramanian</h3>
-          <p class="doctor-quals">M.D., D.M. (Neurology)</p>
-          <span class="doctor-badge">Consultant Neurologist</span>
-          <p class="doctor-desc">Consultant Neurologist specializing in complex brain, spine, and nervous system disorders.</p>
-          <a href="#appointment" class="btn btn-primary">Book Appointment</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       8. HOME CARE SECTION
-  ============================================================ -->
-  <section id="homecare">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Home Care</span>
-        <h2>Healthcare at Your Doorstep</h2>
-        <p>We bring quality medical services directly to your home — so you can recover in comfort.</p>
-      </div>
-
-      <div class="homecare-grid">
-        <div class="homecare-card reveal">
-          <span class="homecare-icon">💊</span>
-          <h3>Pharmacy at Home</h3>
-          <p>Get your prescribed medicines and medical supplies delivered directly to your doorstep — safe, prompt, and hassle-free.</p>
-          <a href="#appointment" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="homecare-card reveal reveal-delay-1">
-          <span class="homecare-icon">🧪</span>
-          <h3>Investigations at Home</h3>
-          <p>Lab tests and diagnostic sample collections done at home by trained technicians — no need to visit the clinic.</p>
-          <a href="#appointment" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="homecare-card reveal reveal-delay-2">
-          <span class="homecare-icon">🛏️</span>
-          <h3>Medical Equipment at Home</h3>
-          <p>Rent or buy essential medical equipment for home patient care — including monitors, oxygen, and mobility aids.</p>
-          <a href="#appointment" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       9. APPOINTMENT SECTION
-  ============================================================ -->
-  <section id="appointment">
-    <div class="container">
-      <div class="appointment-grid">
-
-        <div class="appointment-info reveal">
-          <span class="section-label">Get in Touch</span>
-          <h2>Book an Appointment</h2>
-          <p>Fill in the form and our team will contact you shortly to confirm your appointment at your preferred time.</p>
-
-          <div style="margin-bottom:28px;">
-            <div style="display:flex;flex-direction:column;gap:14px;">
-              <div style="display:flex;align-items:center;gap:12px;font-size:14px;">
-                <div style="width:40px;height:40px;background:rgba(23,165,137,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--secondary);flex-shrink:0;"><i class="fa-solid fa-clock"></i></div>
-                <div><strong style="display:block;color:var(--text-dark);font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">Mon – Sat</strong>9:00 AM – 8:00 PM</div>
-              </div>
-              <div style="display:flex;align-items:center;gap:12px;font-size:14px;">
-                <div style="width:40px;height:40px;background:rgba(23,165,137,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--secondary);flex-shrink:0;"><i class="fa-solid fa-sun"></i></div>
-                <div><strong style="display:block;color:var(--text-dark);font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">Sunday</strong>10:00 AM – 2:00 PM</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="emergency-alert">
-            <div class="ea-icon">🚨</div>
-            <div>
-              <h4>Emergency? We're available 24/7</h4>
-              <a href="tel:9600123463">96001 23463</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="reveal reveal-delay-1">
-          <div class="form-card">
-            <div id="appointmentForm">
-              <form name="appointment" netlify netlify-honeypot="bot-field" onsubmit="handleFormSubmit(event)">
-                <input type="hidden" name="form-name" value="appointment" />
-                <div class="form-group hidden">
-                  <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" placeholder="Your full name" required />
-                  </div>
-                  <div class="form-group">
-                    <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required />
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="email">Email Address <span style="font-weight:400;color:var(--text-body)">(Optional)</span></label>
-                  <input type="email" id="email" name="email" placeholder="your@email.com" />
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="department">Department *</label>
-                    <select id="department" name="department" required>
-                      <option value="" disabled selected>Select department</option>
-                      <option value="General Medicine">General Medicine</option>
-                      <option value="Gynecology">Gynecology</option>
-                      <option value="Neurology">Neurology</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="date">Preferred Date *</label>
-                    <input type="date" id="date" name="date" required />
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="message">Message <span style="font-weight:400;color:var(--text-body)">(Optional)</span></label>
-                  <textarea id="message" name="message" rows="4" placeholder="Briefly describe your concern or symptoms…"></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary form-submit">
-                  <i class="fa-regular fa-calendar-check"></i> Request Appointment
-                </button>
-              </form>
-            </div>
-
-            <div class="form-success" id="formSuccess">
-              <div class="fs-icon"><i class="fa-solid fa-circle-check"></i></div>
-              <h3>Appointment Requested!</h3>
-              <p>Thank you! Our team will call you shortly to confirm your appointment.</p>
-              <a href="tel:9600123463" class="btn btn-primary" style="margin-top:20px;">
-                <i class="fa-solid fa-phone"></i> Call Us Now
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       10. CONTACT / LOCATION
-  ============================================================ -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Find Us</span>
-        <h2>Location &amp; Contact</h2>
-        <p>We're conveniently located in the heart of Mogappair West, Chennai.</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="map-wrap reveal">
-          <iframe
-            src="https://maps.google.com/maps?q=Prithvi+Clinic+Mogappair+West+Chennai&output=embed"
-            title="Prithvi Clinic Location"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-
-        <div class="reveal reveal-delay-1">
-          <div class="contact-card">
-            <h3><i class="fa-solid fa-location-dot" style="color:var(--secondary);margin-right:8px;"></i>Prithvi Clinic</h3>
-
-            <div class="contact-item">
-              <div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div>
-              <div class="ci-text">
-                <strong>Address</strong>
-                <span>Ground Floor, 5th Block, 8 Thilakar St,</span>
-                <span>Mogappair West, Chennai – 600037</span>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
-              <div class="ci-text">
-                <strong>Phone</strong>
-                <a href="tel:9600123463">96001 23463</a>
-                <a href="tel:7397391156">7397391156</a>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
-              <div class="ci-text">
-                <strong>Email</strong>
-                <a href="mailto:prithviclinic@gmail.com">prithviclinic@gmail.com</a>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="ci-icon"><i class="fa-solid fa-clock"></i></div>
-              <div class="ci-text">
-                <strong>Hours</strong>
-                <span>Mon – Sat: 9:00 AM – 8:00 PM</span>
-                <span>Sunday: 10:00 AM – 2:00 PM</span>
-              </div>
-            </div>
-
-            <div class="contact-socials">
-              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-              <a href="https://wa.me/917397391156" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       11. FOOTER
-  ============================================================ -->
-  <footer id="footer">
-    <div class="container">
-      <div class="footer-grid">
-
-        <div class="footer-col">
-          <div class="footer-logo">
-            <div class="fl-icon"><i class="fa-solid fa-plus"></i></div>
-            Prithvi Clinic
-          </div>
-          <p style="margin-bottom:8px;font-weight:600;color:rgba(255,255,255,0.9);">Your Health, Our Priority</p>
-          <p>Providing trusted, compassionate healthcare to the residents of Mogappair since 2018.</p>
-        </div>
-
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <nav class="footer-links">
-            <a href="#hero">Home</a>
-            <a href="#about">About</a>
-            <a href="#specialties">Specialties</a>
-            <a href="#diagnostics">Diagnostics</a>
-            <a href="#homecare">Home Care</a>
-            <a href="#contact">Contact</a>
-          </nav>
-        </div>
-
-        <div class="footer-col">
-          <h4>Services</h4>
-          <nav class="footer-links">
-            <a href="#specialties">Gynaecology</a>
-            <a href="#specialties">General Medicine</a>
-            <a href="#specialties">Neurology</a>
-            <a href="#homecare">Home Care</a>
-            <a href="#diagnostics">Diagnostics</a>
-          </nav>
-        </div>
-
-        <div class="footer-col">
-          <h4>Contact Us</h4>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-phone"></i>
-            <div>
-              <a href="tel:9600123463">96001 23463</a><br/>
-              <a href="tel:7397391156">7397391156</a>
-            </div>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:prithviclinic@gmail.com">prithviclinic@gmail.com</a>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>8 Thilakar St, Mogappair West, Chennai – 600037</span>
-          </div>
-          <a href="https://wa.me/917397391156" class="footer-wa-btn" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-          </a>
-        </div>
-
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        © 2025 <span>Prithvi Clinic</span> · All Rights Reserved · Chennai
-      </div>
-    </div>
-  </footer>
-
-  <!-- ============================================================
-       FLOATING ELEMENTS
-  ============================================================ -->
-  <div class="float-wrap">
-    <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
-      <i class="fa-solid fa-chevron-up"></i>
+    <a href="#appointment" class="btn btn-primary nav-cta">
+      <i class="fa-regular fa-calendar-check"></i> Book Appointment
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
     </button>
-    <div class="wa-float">
-      <div class="wa-pulse"></div>
-      <a href="https://wa.me/917397391156" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <div class="wa-tooltip">Chat with us</div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#hero"       onclick="closeMobileNav()">Home</a>
+  <a href="#about"      onclick="closeMobileNav()">About</a>
+  <div class="mobile-divider"></div>
+  <a href="services/general-medicine.html" onclick="closeMobileNav()">General Medicine</a>
+  <a href="services/gynecology.html"       onclick="closeMobileNav()">Gynecology</a>
+  <a href="services/neurology.html"        onclick="closeMobileNav()">Neurology</a>
+  <div class="mobile-divider"></div>
+  <a href="diagnostics.html"  onclick="closeMobileNav()">Diagnostics</a>
+  <a href="homecare.html"     onclick="closeMobileNav()">Home Care</a>
+  <a href="blog/index.html"   onclick="closeMobileNav()">Blog</a>
+  <a href="#contact"          onclick="closeMobileNav()">Contact</a>
+  <a href="#appointment" class="btn btn-primary mobile-nav-cta" onclick="closeMobileNav()">Book Appointment</a>
+</div>
+
+<!-- ── Hero ──────────────────────────────────────────── -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content reveal">
+        <div class="hero-badge"><i class="fa-solid fa-location-dot"></i> Mogappair, Chennai</div>
+        <h1>Your Health,<br><span>Our Priority</span></h1>
+        <p>Expert doctors, compassionate care, and modern diagnostics — all in the heart of Mogappair.</p>
+        <div class="hero-buttons">
+          <a href="#appointment" class="btn btn-primary"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+          <a href="#specialties" class="btn btn-outline">Our Services <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal reveal-delay-2">
+        <div class="hero-svg-wrap">
+          <svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" aria-label="Medical illustration">
+            <defs>
+              <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#e8f4fd"/><stop offset="100%" style="stop-color:#d1f2eb"/></linearGradient>
+              <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0A3D62"/><stop offset="100%" style="stop-color:#1a6fa3"/></linearGradient>
+              <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#17A589"/><stop offset="100%" style="stop-color:#1abc9c"/></linearGradient>
+              <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f4c7a7"/><stop offset="100%" style="stop-color:#e8a882"/></linearGradient>
+            </defs>
+            <circle cx="240" cy="210" r="190" fill="url(#bgGrad)"/>
+            <circle cx="240" cy="210" r="190" fill="none" stroke="#17A589" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.3"/>
+            <circle cx="240" cy="210" r="160" fill="none" stroke="#0A3D62" stroke-width="1" stroke-dasharray="4 8" opacity="0.15"/>
+            <rect x="155" y="210" width="90" height="130" rx="8" fill="url(#blueGrad)"/>
+            <polygon points="200,210 175,230 185,260 200,245" fill="white" opacity="0.9"/>
+            <polygon points="200,210 225,230 215,260 200,245" fill="white" opacity="0.9"/>
+            <path d="M180 230 Q170 270 175 285 Q180 295 190 295 Q200 295 205 285" fill="none" stroke="#F0B429" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="192" cy="298" r="7" fill="#F0B429"/>
+            <ellipse cx="200" cy="190" rx="32" ry="36" fill="url(#skinGrad)"/>
+            <ellipse cx="200" cy="163" rx="33" ry="18" fill="#2d1b10"/>
+            <ellipse cx="200" cy="168" rx="28" ry="10" fill="#3d2515"/>
+            <ellipse cx="190" cy="188" rx="5" ry="6" fill="white"/><ellipse cx="210" cy="188" rx="5" ry="6" fill="white"/>
+            <circle cx="191" cy="189" r="3" fill="#1a1a2e"/><circle cx="211" cy="189" r="3" fill="#1a1a2e"/>
+            <path d="M192 200 Q200 208 208 200" fill="none" stroke="#c07850" stroke-width="2" stroke-linecap="round"/>
+            <rect x="130" y="215" width="28" height="65" rx="14" fill="url(#blueGrad)"/>
+            <rect x="242" y="215" width="28" height="65" rx="14" fill="url(#blueGrad)"/>
+            <ellipse cx="144" cy="284" rx="14" ry="12" fill="url(#skinGrad)"/>
+            <ellipse cx="256" cy="284" rx="14" ry="12" fill="url(#skinGrad)"/>
+            <rect x="270" y="248" width="80" height="100" rx="8" fill="#e8f4fd" stroke="#b8d8f0" stroke-width="1.5"/>
+            <ellipse cx="310" cy="230" rx="28" ry="30" fill="url(#skinGrad)"/>
+            <ellipse cx="310" cy="208" rx="28" ry="14" fill="#8B4513"/>
+            <ellipse cx="302" cy="228" rx="4.5" ry="5" fill="white"/><ellipse cx="318" cy="228" rx="4.5" ry="5" fill="white"/>
+            <circle cx="303" cy="229" r="2.5" fill="#1a1a2e"/><circle cx="319" cy="229" r="2.5" fill="#1a1a2e"/>
+            <path d="M303 240 Q310 247 317 240" fill="none" stroke="#c07850" stroke-width="2" stroke-linecap="round"/>
+            <rect x="255" y="255" width="22" height="55" rx="11" fill="#e8f4fd" stroke="#b8d8f0" stroke-width="1"/>
+            <rect x="323" y="255" width="22" height="55" rx="11" fill="#e8f4fd" stroke="#b8d8f0" stroke-width="1"/>
+            <rect x="216" y="60" width="48" height="16" rx="5" fill="url(#tealGrad)" opacity="0.9"/>
+            <rect x="228" y="48" width="16" height="40" rx="5" fill="url(#tealGrad)" opacity="0.9"/>
+            <rect x="218" y="270" width="44" height="58" rx="6" fill="white" stroke="#c5dce8" stroke-width="1.5"/>
+            <rect x="226" y="263" width="28" height="12" rx="4" fill="#c5dce8"/>
+            <line x1="226" y1="285" x2="254" y2="285" stroke="#a0b4c0" stroke-width="2"/>
+            <line x1="226" y1="293" x2="254" y2="293" stroke="#a0b4c0" stroke-width="2"/>
+            <line x1="226" y1="301" x2="244" y2="301" stroke="#a0b4c0" stroke-width="2"/>
+            <polyline points="50,320 80,320 95,290 115,350 135,295 155,320 185,320" fill="none" stroke="#17A589" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+            <polyline points="295,380 325,380 340,355 360,400 380,360 400,380 430,380" fill="none" stroke="#0A3D62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+            <rect x="55" y="140" width="30" height="14" rx="7" fill="#17A589" opacity="0.7"/>
+            <line x1="70" y1="140" x2="70" y2="154" stroke="white" stroke-width="1.5" opacity="0.8"/>
+            <rect x="385" y="170" width="30" height="14" rx="7" fill="#F0B429" opacity="0.7"/>
+            <text x="68" y="95" font-size="18" fill="#F0B429" opacity="0.8">✦</text>
+            <text x="385" y="115" font-size="14" fill="#17A589" opacity="0.7">✦</text>
+          </svg>
+          <div class="floating-card card-1">
+            <div class="fc-icon" style="background:rgba(23,165,137,.1);color:var(--secondary);"><i class="fa-solid fa-user-doctor"></i></div>
+            <div><div style="font-size:11px;color:var(--text-body);font-weight:500;">Specialists</div><div>3 Expert Doctors</div></div>
+          </div>
+          <div class="floating-card card-2">
+            <div class="fc-icon" style="background:rgba(240,180,41,.1);color:var(--accent);"><i class="fa-solid fa-star"></i></div>
+            <div><div style="font-size:11px;color:var(--text-body);font-weight:500;">Experience</div><div>5+ Years of Care</div></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- ============================================================
-       JAVASCRIPT
-  ============================================================ -->
-  <script>
-    // ── Navbar scroll effect ──────────────────────────────────────
-    const navbar = document.getElementById('navbar');
-    const scrollTopBtn = document.getElementById('scrollTop');
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal"><div class="stat-number"><span class="counter" data-target="5">0</span>+</div><div class="stat-label">Years of Service</div></div>
+        <div class="stat-item reveal reveal-delay-1"><div class="stat-number"><span class="counter" data-target="3">0</span></div><div class="stat-label">Specialists</div></div>
+        <div class="stat-item reveal reveal-delay-2"><div class="stat-number"><span class="counter" data-target="10">0</span>+</div><div class="stat-label">Diagnostic Services</div></div>
+        <div class="stat-item reveal reveal-delay-3"><div class="stat-number"><span class="counter" data-target="1000">0</span>+</div><div class="stat-label">Patients Served</div></div>
+      </div>
+    </div>
+  </div>
+  <svg class="wave-divider" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff"/>
+  </svg>
+</section>
 
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      navbar.classList.toggle('scrolled', scrollY > 80);
-      scrollTopBtn.classList.toggle('visible', scrollY > 400);
-      updateActiveNav();
-    });
+<!-- ── About ──────────────────────────────────────────── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap reveal">
+        <div class="about-cross">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="35" y="10" width="30" height="80" rx="6" fill="white"/>
+            <rect x="10" y="35" width="80" height="30" rx="6" fill="white"/>
+          </svg>
+        </div>
+        <div class="about-overlay-text">
+          <div class="about-overlay-badge">
+            <div class="aob-number">5+</div>
+            <div class="aob-text">Years of Trusted Healthcare in Mogappair</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-content reveal reveal-delay-1">
+        <span class="section-label">About Us</span>
+        <h2>Trusted Care in the Heart of Mogappair</h2>
+        <p>Prithvi Clinic has been serving the residents of Mogappair, Chennai since 2018. We are committed to providing accessible, high-quality healthcare with a patient-first philosophy at the core of everything we do.</p>
+        <p>Our clinic brings together experienced specialists across General &amp; Emergency Medicine, Gynecology &amp; Obstetrics, and Advanced Neurology — equipped with clinical-level diagnostic facilities for accurate and effective treatment.</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="af-icon">🩺</div>
+            <div class="af-text"><h4>Experienced Specialists</h4><p>Board-certified doctors with decades of combined expertise.</p></div>
+          </div>
+          <div class="about-feature">
+            <div class="af-icon">🏠</div>
+            <div class="af-text"><h4>Home Care Services</h4><p>Medicines, investigations, and equipment to your doorstep.</p></div>
+          </div>
+          <div class="about-feature">
+            <div class="af-icon">🔬</div>
+            <div class="af-text"><h4>Advanced Diagnostics</h4><p>EEG, EMG, Sleep Study, Holter Monitor and more.</p></div>
+          </div>
+        </div>
+        <a href="#appointment" class="btn btn-primary">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    // ── Active nav link ───────────────────────────────────────────
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const sections = document.querySelectorAll('section[id]');
+<!-- ── Specialties ────────────────────────────────────── -->
+<section id="specialties">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">What We Treat</span>
+      <h2>Our Medical Specialties</h2>
+      <p>Comprehensive, multi-specialty healthcare delivered by expert physicians.</p>
+    </div>
+    <div class="specialties-grid">
+      <div class="specialty-card reveal">
+        <div class="specialty-icon"><i class="fa-solid fa-stethoscope"></i></div>
+        <h3>General &amp; Emergency Medicine</h3>
+        <p>Diagnosis and treatment of internal diseases with 24/7 emergency care readiness.</p>
+        <a href="services/general-medicine.html" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="specialty-card reveal reveal-delay-1">
+        <div class="specialty-icon"><i class="fa-solid fa-venus"></i></div>
+        <h3>Gynecology &amp; Obstetrics</h3>
+        <p>Comprehensive women's health, prenatal care, and obstetric surgical expertise.</p>
+        <a href="services/gynecology.html" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="specialty-card reveal reveal-delay-2">
+        <div class="specialty-icon"><i class="fa-solid fa-brain"></i></div>
+        <h3>Advanced Neurology</h3>
+        <p>Diagnosis and treatment of brain, spine, and nervous system disorders.</p>
+        <a href="services/neurology.html" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    function updateActiveNav() {
-      let current = '';
-      sections.forEach(sec => {
-        if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
-      });
-      navLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
-      });
-    }
+<!-- ── Diagnostics ────────────────────────────────────── -->
+<section id="diagnostics">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label light">Diagnostics</span>
+      <h2>Comprehensive Diagnostic Services</h2>
+      <p>State-of-the-art diagnostic tools for accurate, timely results — all under one roof.</p>
+    </div>
+    <div class="diagnostics-grid">
+      <div class="diagnostic-tile reveal"><i class="fa-solid fa-moon dt-icon"></i><h4>Sleep Study</h4><p>Detailed analysis of sleep disorders and patterns.</p></div>
+      <div class="diagnostic-tile reveal reveal-delay-1"><i class="fa-solid fa-wave-square dt-icon"></i><h4>EEG</h4><p>Brain activity monitoring for neurological conditions.</p></div>
+      <div class="diagnostic-tile reveal reveal-delay-2"><i class="fa-solid fa-bolt dt-icon"></i><h4>EMG</h4><p>Muscle &amp; nerve evaluation for neuromuscular disease.</p></div>
+      <div class="diagnostic-tile reveal"><i class="fa-solid fa-network-wired dt-icon"></i><h4>NCS</h4><p>Nerve Conduction Study for peripheral neuropathy.</p></div>
+      <div class="diagnostic-tile reveal reveal-delay-1"><i class="fa-solid fa-lungs dt-icon"></i><h4>BiPAP / CPAP</h4><p>Non-invasive ventilation for sleep apnea.</p></div>
+      <div class="diagnostic-tile reveal reveal-delay-2"><i class="fa-solid fa-heart-pulse dt-icon"></i><h4>24Hr BP Monitor</h4><p>Round-the-clock blood pressure tracking.</p></div>
+      <div class="diagnostic-tile reveal"><i class="fa-solid fa-wind dt-icon"></i><h4>Pulmonary Function Test</h4><p>Lung capacity and breathing efficiency assessment.</p></div>
+      <div class="diagnostic-tile reveal reveal-delay-1"><i class="fa-solid fa-heartbeat dt-icon"></i><h4>24Hr Holter Monitor</h4><p>Continuous ECG for cardiac arrhythmia detection.</p></div>
+      <div class="diagnostic-tile reveal reveal-delay-2"><i class="fa-solid fa-ear-listen dt-icon"></i><h4>Audiometry</h4><p>Comprehensive hearing assessment and testing.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:40px;" class="reveal">
+      <a href="diagnostics.html" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,0.5);">View All Diagnostics <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
 
-    // ── Hamburger / Mobile Nav ────────────────────────────────────
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav  = document.getElementById('mobileNav');
+<!-- ── Doctors ────────────────────────────────────────── -->
+<section id="doctors">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Our Team</span>
+      <h2>Meet Our Specialists</h2>
+      <p>Qualified, caring professionals dedicated to your health and well-being.</p>
+    </div>
+    <div class="doctors-grid">
+      <div class="doctor-card reveal">
+        <div class="doctor-avatar">RP</div>
+        <h3>Dr. R. Prithviraj</h3>
+        <p class="doctor-quals">M.B.B.S., M.E.M.</p>
+        <span class="doctor-badge">General &amp; Emergency Medicine</span>
+        <p class="doctor-desc">Expert in emergency care and internal medicine with a commitment to rapid, accurate diagnosis.</p>
+        <a href="services/general-medicine.html" class="btn btn-primary btn-full">View Profile</a>
+      </div>
+      <div class="doctor-card reveal reveal-delay-1">
+        <div class="doctor-avatar">SP</div>
+        <h3>Dr. S.V. Priyanka</h3>
+        <p class="doctor-quals">M.B.B.S., M.S.(OBG), R.C.D.</p>
+        <span class="doctor-badge">Gynecology &amp; Obstetrics</span>
+        <p class="doctor-desc">Dedicated women's health specialist with extensive obstetric surgical training.</p>
+        <a href="services/gynecology.html" class="btn btn-primary btn-full">View Profile</a>
+      </div>
+      <div class="doctor-card reveal reveal-delay-2">
+        <div class="doctor-avatar">KS</div>
+        <h3>Dr. K. Sankara Subramanian</h3>
+        <p class="doctor-quals">M.D., D.M. (Neurology)</p>
+        <span class="doctor-badge">Consultant Neurologist</span>
+        <p class="doctor-desc">Consultant Neurologist specialising in complex brain, spine, and nervous system disorders.</p>
+        <a href="services/neurology.html" class="btn btn-primary btn-full">View Profile</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    hamburger.addEventListener('click', () => {
-      const isOpen = mobileNav.classList.toggle('open');
-      hamburger.classList.toggle('active', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
+<!-- ── Home Care ──────────────────────────────────────── -->
+<section id="homecare-home">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Home Care</span>
+      <h2>Healthcare at Your Doorstep</h2>
+      <p>We bring quality medical services directly to your home.</p>
+    </div>
+    <div class="homecare-grid-home">
+      <div class="homecare-card-home reveal">
+        <span class="homecare-icon-home">💊</span>
+        <h3>Pharmacy at Home</h3>
+        <p>Get your prescribed medicines delivered directly to your doorstep — safe, prompt, and hassle-free.</p>
+        <a href="homecare.html" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="homecare-card-home reveal reveal-delay-1">
+        <span class="homecare-icon-home">🧪</span>
+        <h3>Investigations at Home</h3>
+        <p>Lab tests and diagnostic collections done at home by trained technicians.</p>
+        <a href="homecare.html" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="homecare-card-home reveal reveal-delay-2">
+        <span class="homecare-icon-home">🛏️</span>
+        <h3>Medical Equipment at Home</h3>
+        <p>Rent or buy essential medical equipment for home patient care.</p>
+        <a href="homecare.html" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    function closeMobileNav() {
-      mobileNav.classList.remove('open');
-      hamburger.classList.remove('active');
-      document.body.style.overflow = '';
-    }
+<!-- ── Testimonials ───────────────────────────────────── -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Patient Stories</span>
+      <h2>What Our Patients Say</h2>
+      <p>Real experiences from the families and individuals we've had the privilege to care for.</p>
+    </div>
+    <div class="testimonials-wrap reveal">
+      <div style="overflow:hidden;">
+        <div class="testimonials-track">
 
-    // ── Scroll Reveal (IntersectionObserver) ─────────────────────
-    const revealEls = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.12 });
-    revealEls.forEach(el => revealObserver.observe(el));
+          <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <p>Dr. Prithviraj diagnosed my father's condition accurately within minutes. The emergency care was swift and the staff was incredibly reassuring during a stressful time. We're grateful to the entire Prithvi Clinic team.</p>
+            <div class="testimonial-author">
+              <div class="ta-avatar">RK</div>
+              <div class="ta-info">
+                <strong>Ramesh Kumar</strong>
+                <span>Mogappair West</span>
+                <div class="ta-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+          </div>
 
-    // ── Counter Animation ─────────────────────────────────────────
-    const counters = document.querySelectorAll('.counter');
-    let countersStarted = false;
+          <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <p>I had been experiencing unexplained headaches for months. Dr. Sankara Subramanian ordered an EEG and identified the issue within days. His thorough approach and patience in explaining everything gave me immense confidence.</p>
+            <div class="testimonial-author">
+              <div class="ta-avatar">PS</div>
+              <div class="ta-info">
+                <strong>Priya Sundaram</strong>
+                <span>Anna Nagar</span>
+                <div class="ta-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+          </div>
 
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !countersStarted) {
-          countersStarted = true;
-          counters.forEach(counter => {
-            const target = parseInt(counter.dataset.target, 10);
-            const duration = 1800;
-            const step = target / (duration / 16);
-            let current = 0;
-            const timer = setInterval(() => {
-              current += step;
-              if (current >= target) {
-                current = target;
-                clearInterval(timer);
-              }
-              counter.textContent = Math.floor(current);
-            }, 16);
-          });
-        }
-      });
-    }, { threshold: 0.5 });
+          <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <p>The home care pharmacy service is a lifesaver for our elderly parents. Medicines arrive on time, the team is courteous, and they always check for prescription validity. This service deserves a 10/10!</p>
+            <div class="testimonial-author">
+              <div class="ta-avatar">KB</div>
+              <div class="ta-info">
+                <strong>Kavitha Balaji</strong>
+                <span>Mogappair East</span>
+                <div class="ta-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+          </div>
 
-    const statsBar = document.querySelector('.stats-bar');
-    if (statsBar) counterObserver.observe(statsBar);
+          <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <p>I underwent a Sleep Study at Prithvi Clinic and was diagnosed with sleep apnea. After starting CPAP therapy, my quality of life has transformed completely. I wake up refreshed for the first time in years. Thank you!</p>
+            <div class="testimonial-author">
+              <div class="ta-avatar">SR</div>
+              <div class="ta-info">
+                <strong>Suresh Raghavan</strong>
+                <span>Ambattur</span>
+                <div class="ta-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+          </div>
 
-    // ── Form Submission ───────────────────────────────────────────
-    function handleFormSubmit(e) {
-      // Allow Netlify to handle the actual POST; show success on client
-      const form = e.target;
-      const formWrap = document.getElementById('appointmentForm');
-      const successDiv = document.getElementById('formSuccess');
+          <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <p>Prithvi Clinic is our family's go-to healthcare centre. The doctors take time to listen, explain, and never rush consultations. Clean facility, friendly staff, and genuinely caring doctors. Highly recommend!</p>
+            <div class="testimonial-author">
+              <div class="ta-avatar">MK</div>
+              <div class="ta-info">
+                <strong>Meena Krishnan</strong>
+                <span>Mogappair West</span>
+                <div class="ta-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+              </div>
+            </div>
+          </div>
 
-      // For Netlify forms in production: let the form submit naturally
-      // For local preview: show success immediately
-      if (window.location.hostname === 'localhost' || window.location.protocol === 'file:') {
-        e.preventDefault();
-        formWrap.style.display = 'none';
-        successDiv.style.display = 'block';
-        return;
-      }
+        </div><!-- .testimonials-track -->
+      </div>
 
-      // On Netlify hosting: submit, then show success
-      e.preventDefault();
-      const data = new FormData(form);
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data).toString()
-      })
-      .then(() => {
-        formWrap.style.display = 'none';
-        successDiv.style.display = 'block';
-      })
-      .catch(() => {
-        formWrap.style.display = 'none';
-        successDiv.style.display = 'block';
-      });
-    }
+      <div class="testimonials-arrows">
+        <button class="t-arrow" id="tPrev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="t-arrow" id="tNext"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+      <div class="testimonials-nav">
+        <button class="t-dot active"></button>
+        <button class="t-dot"></button>
+        <button class="t-dot"></button>
+      </div>
+    </div>
+  </div>
+</section>
 
-    // ── Set min date for appointment to today ────────────────────
-    const dateInput = document.getElementById('date');
-    if (dateInput) {
-      const today = new Date().toISOString().split('T')[0];
-      dateInput.setAttribute('min', today);
-    }
+<!-- ── Blog Preview ───────────────────────────────────── -->
+<section id="blog-preview">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Health Blog</span>
+      <h2>Latest Health Insights</h2>
+      <p>Expert tips, medical advice, and wellness guides from our doctors.</p>
+    </div>
+    <div class="blog-preview-grid">
+      <div class="blog-card reveal" style="background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:var(--transition);">
+        <div class="blog-card-thumb" style="height:180px;background:linear-gradient(135deg,#0A3D62,#17A589);display:flex;align-items:center;justify-content:center;position:relative;">
+          <span style="font-size:56px;">😴</span>
+          <span class="blog-cat-badge">Sleep Health</span>
+        </div>
+        <div class="blog-card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+          <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> Mar 10, 2025</span><span><i class="fa-regular fa-clock"></i> 8 min</span></div>
+          <h3 style="font-size:17px;margin-bottom:10px;color:var(--text-dark);line-height:1.4;"><a href="blog/sleep-health.html" style="transition:var(--transition);">Why Sleep Matters More Than You Think</a></h3>
+          <p style="font-size:14px;flex:1;margin-bottom:16px;">Sleep is when your body heals, your brain consolidates memories, and your immune system recharges.</p>
+          <a href="blog/sleep-health.html" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
 
-    // ── Smooth scroll for all anchor links ───────────────────────
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          const offset = 80;
-          const top = target.getBoundingClientRect().top + window.scrollY - offset;
-          window.scrollTo({ top, behavior: 'smooth' });
-        }
-      });
-    });
-  </script>
+      <div class="blog-card reveal reveal-delay-1" style="background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:var(--transition);">
+        <div class="blog-card-thumb" style="height:180px;background:linear-gradient(135deg,#1a237e,#0A3D62);display:flex;align-items:center;justify-content:center;position:relative;">
+          <span style="font-size:56px;">🧠</span>
+          <span class="blog-cat-badge">Neurology</span>
+        </div>
+        <div class="blog-card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+          <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> Feb 28, 2025</span><span><i class="fa-regular fa-clock"></i> 6 min</span></div>
+          <h3 style="font-size:17px;margin-bottom:10px;color:var(--text-dark);line-height:1.4;"><a href="blog/neurology-signs.html" style="transition:var(--transition);">Early Warning Signs of Neurological Disorders</a></h3>
+          <p style="font-size:14px;flex:1;margin-bottom:16px;">Learn to recognise early neurological warning signs before they become serious problems.</p>
+          <a href="blog/neurology-signs.html" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
 
+      <div class="blog-card reveal reveal-delay-2" style="background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:var(--transition);">
+        <div class="blog-card-thumb" style="height:180px;background:linear-gradient(135deg,#c0392b,#e74c3c);display:flex;align-items:center;justify-content:center;position:relative;">
+          <span style="font-size:56px;">❤️</span>
+          <span class="blog-cat-badge">General Health</span>
+        </div>
+        <div class="blog-card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+          <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> Feb 20, 2025</span><span><i class="fa-regular fa-clock"></i> 7 min</span></div>
+          <h3 style="font-size:17px;margin-bottom:10px;color:var(--text-dark);line-height:1.4;"><a href="blog/blood-pressure.html" style="transition:var(--transition);">The Silent Threat: Understanding High Blood Pressure</a></h3>
+          <p style="font-size:14px;flex:1;margin-bottom:16px;">Hypertension affects millions silently. Learn the risks and how to keep your BP in check.</p>
+          <a href="blog/blood-pressure.html" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px;" class="reveal">
+      <a href="blog/index.html" class="btn btn-outline">View All Articles <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Appointment ────────────────────────────────────── -->
+<section id="appointment">
+  <div class="container">
+    <div class="appointment-grid">
+      <div class="reveal">
+        <span class="section-label">Get in Touch</span>
+        <h2>Book an Appointment</h2>
+        <p style="margin-bottom:28px;">Fill in the form and our team will contact you shortly to confirm your appointment.</p>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px;">
+          <div style="display:flex;align-items:center;gap:12px;font-size:14px;">
+            <div style="width:40px;height:40px;background:rgba(23,165,137,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--secondary);flex-shrink:0;"><i class="fa-solid fa-clock"></i></div>
+            <div><strong style="display:block;color:var(--text-dark);font-size:13px;text-transform:uppercase;letter-spacing:.5px;">Mon – Sat</strong>9:00 AM – 8:00 PM</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:14px;">
+            <div style="width:40px;height:40px;background:rgba(23,165,137,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--secondary);flex-shrink:0;"><i class="fa-solid fa-sun"></i></div>
+            <div><strong style="display:block;color:var(--text-dark);font-size:13px;text-transform:uppercase;letter-spacing:.5px;">Sunday</strong>10:00 AM – 2:00 PM</div>
+          </div>
+        </div>
+        <div class="emergency-alert">
+          <div class="ea-icon">🚨</div>
+          <div><h4>Emergency? We're available 24/7</h4><a href="tel:9600123463">96001 23463</a></div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-1">
+        <div class="form-card">
+          <div id="appointmentForm">
+            <form name="appointment" netlify netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="appointment"/>
+              <div class="form-group hidden"><label>Don't fill: <input name="bot-field"/></label></div>
+              <div class="form-row">
+                <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" name="name" placeholder="Your full name" required/></div>
+                <div class="form-group"><label for="phone">Phone *</label><input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required/></div>
+              </div>
+              <div class="form-group"><label for="email">Email <span style="font-weight:400;color:var(--text-body)">(Optional)</span></label><input type="email" id="email" name="email" placeholder="your@email.com"/></div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="department">Department *</label>
+                  <select id="department" name="department" required>
+                    <option value="" disabled selected>Select department</option>
+                    <option>General Medicine</option><option>Gynecology</option>
+                    <option>Neurology</option><option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group"><label for="date">Preferred Date *</label><input type="date" id="date" name="date" required/></div>
+              </div>
+              <div class="form-group"><label for="message">Message <span style="font-weight:400;color:var(--text-body)">(Optional)</span></label><textarea id="message" name="message" rows="4" placeholder="Briefly describe your concern…"></textarea></div>
+              <button type="submit" class="btn btn-primary btn-full" style="border-radius:12px;padding:16px;font-size:16px;">
+                <i class="fa-regular fa-calendar-check"></i> Request Appointment
+              </button>
+            </form>
+          </div>
+          <div class="form-success" id="formSuccess">
+            <div class="fs-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h3>Appointment Requested!</h3>
+            <p>Thank you! Our team will call you shortly to confirm.</p>
+            <a href="tel:9600123463" class="btn btn-primary" style="margin-top:20px;"><i class="fa-solid fa-phone"></i> Call Us Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ────────────────────────────────────────── -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Find Us</span>
+      <h2>Location &amp; Contact</h2>
+      <p>Conveniently located in the heart of Mogappair West, Chennai.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="map-wrap reveal">
+        <iframe src="https://maps.google.com/maps?q=Prithvi+Clinic+Mogappair+West+Chennai&output=embed" title="Prithvi Clinic Location" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="contact-card">
+          <h3><i class="fa-solid fa-location-dot" style="color:var(--secondary);margin-right:8px;"></i>Prithvi Clinic</h3>
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="ci-text"><strong>Address</strong><span>Ground Floor, 5th Block, 8 Thilakar St,</span><span>Mogappair West, Chennai – 600037</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="ci-text"><strong>Phone</strong><a href="tel:9600123463">96001 23463</a><a href="tel:7397391156">7397391156</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="ci-text"><strong>Email</strong><a href="mailto:prithviclinic@gmail.com">prithviclinic@gmail.com</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="ci-text"><strong>Hours</strong><span>Mon – Sat: 9:00 AM – 8:00 PM</span><span>Sunday: 10:00 AM – 2:00 PM</span></div>
+          </div>
+          <div class="contact-socials">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/917397391156" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────── -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo"><div class="fl-icon"><i class="fa-solid fa-plus"></i></div>Prithvi Clinic</div>
+        <p style="margin-bottom:8px;font-weight:600;color:rgba(255,255,255,.9);">Your Health, Our Priority</p>
+        <p>Providing trusted, compassionate healthcare to the residents of Mogappair since 2018.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#specialties">Specialties</a>
+          <a href="diagnostics.html">Diagnostics</a>
+          <a href="homecare.html">Home Care</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <nav class="footer-links">
+          <a href="services/gynecology.html">Gynaecology</a>
+          <a href="services/general-medicine.html">General Medicine</a>
+          <a href="services/neurology.html">Neurology</a>
+          <a href="homecare.html">Home Care</a>
+          <a href="diagnostics.html">Diagnostics</a>
+          <a href="blog/index.html">Blog</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><div><a href="tel:9600123463">96001 23463</a><br/><a href="tel:7397391156">7397391156</a></div></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:prithviclinic@gmail.com">prithviclinic@gmail.com</a></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>8 Thilakar St, Mogappair West, Chennai – 600037</span></div>
+        <a href="https://wa.me/917397391156" class="footer-wa-btn" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container">© 2025 <span>Prithvi Clinic</span> · All Rights Reserved · Chennai</div></div>
+</footer>
+
+<!-- ── Floating Elements ──────────────────────────────── -->
+<div class="float-wrap">
+  <button id="scrollTop" aria-label="Scroll to top"><i class="fa-solid fa-chevron-up"></i></button>
+  <div class="wa-float">
+    <div class="wa-pulse"></div>
+    <a href="https://wa.me/917397391156" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <div class="wa-tooltip">Chat with us</div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>

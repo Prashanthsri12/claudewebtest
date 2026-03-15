@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>The Silent Threat: Understanding and Managing High Blood Pressure | Prithvi Clinic Blog</title>
+  <meta name="description" content="Learn about hypertension — the silent killer. Understand blood pressure numbers, causes, warning signs, lifestyle changes and when medication is needed."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/styles.css"/>
+</head>
+<body>
+
+  <!-- Emergency Bar -->
+  <div id="emergency-bar">
+    <div class="container">
+      <div class="emergency-text">🚨 Emergency? Call us 24/7 — <a href="tel:9600123463">96001 23463</a></div>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon"><i class="fa-solid fa-plus"></i></div>
+        Prithvi Clinic
+      </a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#about">About</a>
+        <div class="nav-dropdown">
+          <button class="nav-drop-toggle">Services <i class="fa-solid fa-chevron-down fa-xs"></i></button>
+          <div class="nav-drop-menu">
+            <a href="../services/general-medicine.html"><i class="fa-solid fa-stethoscope"></i> General Medicine</a>
+            <a href="../services/gynecology.html"><i class="fa-solid fa-venus"></i> Gynecology</a>
+            <a href="../services/neurology.html"><i class="fa-solid fa-brain"></i> Neurology</a>
+          </div>
+        </div>
+        <a href="../diagnostics.html">Diagnostics</a>
+        <a href="../homecare.html">Home Care</a>
+        <a href="index.html" class="active">Blog</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+      <a href="../index.html#appointment" class="btn btn-primary nav-cta">
+        <i class="fa-regular fa-calendar-check"></i> Book Appointment
+      </a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="../index.html" onclick="closeMobileNav()">Home</a>
+    <a href="../index.html#about" onclick="closeMobileNav()">About</a>
+    <div class="mobile-divider"></div>
+    <a href="../services/general-medicine.html" onclick="closeMobileNav()">General Medicine</a>
+    <a href="../services/gynecology.html" onclick="closeMobileNav()">Gynecology</a>
+    <a href="../services/neurology.html" onclick="closeMobileNav()">Neurology</a>
+    <div class="mobile-divider"></div>
+    <a href="../diagnostics.html" onclick="closeMobileNav()">Diagnostics</a>
+    <a href="../homecare.html" onclick="closeMobileNav()">Home Care</a>
+    <a href="index.html" onclick="closeMobileNav()">Blog</a>
+    <a href="../index.html#contact" onclick="closeMobileNav()">Contact</a>
+    <a href="../index.html#appointment" class="btn btn-primary mobile-nav-cta" onclick="closeMobileNav()">Book Appointment</a>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="blog-hero" style="background:linear-gradient(135deg,var(--primary) 0%,#0d4f7c 100%);padding:80px 0 60px;margin-top:0;">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <i class="fa-solid fa-chevron-right fa-xs"></i>
+        <a href="index.html">Blog</a>
+        <i class="fa-solid fa-chevron-right fa-xs"></i>
+        <span>General Health</span>
+      </nav>
+      <div class="blog-hero-content" style="max-width:780px;">
+        <span class="blog-badge" style="background:var(--secondary);color:#fff;padding:5px 16px;border-radius:50px;font-size:0.82rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;">General Health</span>
+        <h1 style="color:#fff;font-size:clamp(1.8rem,4vw,2.6rem);margin:18px 0 20px;line-height:1.25;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;">The Silent Threat: Understanding and Managing High Blood Pressure</h1>
+        <div class="blog-meta" style="display:flex;flex-wrap:wrap;gap:20px;color:rgba(255,255,255,0.75);font-size:0.9rem;">
+          <span><i class="fa-regular fa-calendar" style="margin-right:6px;"></i>Feb 20, 2025</span>
+          <span><i class="fa-regular fa-clock" style="margin-right:6px;"></i>7 min read</span>
+          <span><i class="fa-regular fa-user" style="margin-right:6px;"></i>By Dr. R. Prithviraj</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Post Layout -->
+  <section style="background:var(--bg);padding:60px 0;">
+    <div class="container">
+      <div class="blog-post-layout">
+
+        <!-- Main Article -->
+        <article class="blog-article">
+
+          <p class="blog-lead reveal" style="font-size:1.15rem;line-height:1.8;color:var(--dark);font-weight:500;border-left:4px solid var(--secondary);padding-left:20px;margin-bottom:36px;">
+            Approximately 1 in 3 adults in India has high blood pressure — and nearly half of them don't know it. Hypertension earns its nickname "the silent killer" because it causes no noticeable symptoms while quietly damaging your heart, brain, kidneys, and blood vessels every single day.
+          </p>
+
+          <p class="reveal">High blood pressure is one of the most common yet most under-managed chronic conditions worldwide. In India, it affects an estimated 200 million people, yet awareness, treatment, and control rates remain dismally low. Understanding what hypertension is, what causes it, and how to manage it is one of the most important things you can do for your long-term health.</p>
+
+          <!-- Section: Understanding Numbers -->
+          <h2 class="reveal" style="margin-top:44px;">Understanding Blood Pressure Numbers</h2>
+          <p class="reveal">A blood pressure reading consists of two numbers expressed as a ratio — for example, 120/80 mmHg. The top number (systolic pressure) measures the force your heart exerts when it beats and pumps blood. The bottom number (diastolic pressure) measures the pressure in your arteries between beats, when your heart is at rest.</p>
+          <p class="reveal">Both numbers matter, and the American Heart Association (AHA) along with Indian guidelines classify blood pressure into the following categories:</p>
+
+          <div class="blog-infobox reveal" style="background:var(--bg-alt);border-radius:16px;padding:28px 32px;margin:28px 0;border:1px solid #e0e7ef;">
+            <h4 style="margin-bottom:16px;color:var(--primary);font-size:1.05rem;"><i class="fa-solid fa-heart-pulse" style="margin-right:8px;color:var(--secondary);"></i>Blood Pressure Categories</h4>
+            <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+              <thead>
+                <tr style="background:var(--primary);color:#fff;">
+                  <th style="padding:10px 14px;text-align:left;border-radius:8px 0 0 0;">Category</th>
+                  <th style="padding:10px 14px;text-align:center;">Systolic (mmHg)</th>
+                  <th style="padding:10px 14px;text-align:center;border-radius:0 8px 0 0;">Diastolic (mmHg)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background:#fff;">
+                  <td style="padding:10px 14px;font-weight:600;color:#27ae60;">Normal</td>
+                  <td style="padding:10px 14px;text-align:center;">Less than 120</td>
+                  <td style="padding:10px 14px;text-align:center;">Less than 80</td>
+                </tr>
+                <tr style="background:var(--bg-alt);">
+                  <td style="padding:10px 14px;font-weight:600;color:#f39c12;">Elevated</td>
+                  <td style="padding:10px 14px;text-align:center;">120–129</td>
+                  <td style="padding:10px 14px;text-align:center;">Less than 80</td>
+                </tr>
+                <tr style="background:#fff;">
+                  <td style="padding:10px 14px;font-weight:600;color:#e67e22;">Stage 1 Hypertension</td>
+                  <td style="padding:10px 14px;text-align:center;">130–139</td>
+                  <td style="padding:10px 14px;text-align:center;">80–89</td>
+                </tr>
+                <tr style="background:var(--bg-alt);">
+                  <td style="padding:10px 14px;font-weight:600;color:#e74c3c;">Stage 2 Hypertension</td>
+                  <td style="padding:10px 14px;text-align:center;">140 or higher</td>
+                  <td style="padding:10px 14px;text-align:center;">90 or higher</td>
+                </tr>
+                <tr style="background:#fff;">
+                  <td style="padding:10px 14px;font-weight:600;color:#c0392b;">Hypertensive Crisis</td>
+                  <td style="padding:10px 14px;text-align:center;">180 or higher</td>
+                  <td style="padding:10px 14px;text-align:center;">120 or higher</td>
+                </tr>
+              </tbody>
+            </table>
+            <p style="margin-top:14px;font-size:0.88rem;color:#666;"><i class="fa-solid fa-circle-info" style="margin-right:6px;color:var(--secondary);"></i>A hypertensive crisis requires immediate emergency medical care. Call us at <a href="tel:9600123463" style="color:var(--primary);font-weight:600;">96001 23463</a> without delay.</p>
+          </div>
+
+          <!-- Section: Causes -->
+          <h2 class="reveal" style="margin-top:44px;">What Causes High Blood Pressure?</h2>
+          <p class="reveal">Hypertension is broadly classified into two types. <strong>Primary (essential) hypertension</strong> — which accounts for 90–95% of all cases — develops gradually over years and has no single identifiable cause. <strong>Secondary hypertension</strong> is caused by an underlying condition such as kidney disease, thyroid disorders, sleep apnea, or adrenal gland tumors, and often appears more suddenly.</p>
+          <p class="reveal">Common risk factors for primary hypertension include:</p>
+          <ul class="blog-list reveal" style="padding-left:20px;line-height:2;">
+            <li><strong>Age:</strong> Risk increases significantly after age 45 in men and 65 in women.</li>
+            <li><strong>Family history:</strong> A first-degree relative with hypertension doubles your risk.</li>
+            <li><strong>Obesity:</strong> Excess weight forces the heart to work harder and raises arterial pressure.</li>
+            <li><strong>Sedentary lifestyle:</strong> Physical inactivity leads to higher resting heart rate and arterial stiffness.</li>
+            <li><strong>High-sodium diet:</strong> Indians consume on average 11g of salt per day — more than double the recommended 5g.</li>
+            <li><strong>Smoking and tobacco use:</strong> Nicotine immediately raises blood pressure and damages artery walls.</li>
+            <li><strong>Chronic stress:</strong> Sustained elevation of stress hormones keeps blood pressure elevated.</li>
+            <li><strong>Chronic kidney disease:</strong> The kidneys regulate fluid balance; impaired kidneys cannot manage pressure effectively.</li>
+            <li><strong>Excessive alcohol:</strong> Regular heavy drinking raises systolic pressure by 5–10 mmHg.</li>
+          </ul>
+
+          <div class="blog-callout reveal" style="background:linear-gradient(135deg,rgba(10,61,98,0.06),rgba(23,165,137,0.06));border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0;">
+            <p style="margin:0;font-weight:500;color:var(--dark);"><i class="fa-solid fa-triangle-exclamation" style="color:var(--accent);margin-right:10px;"></i><strong>Did you know?</strong> Indians are genetically more predisposed to hypertension and develop it at a younger age compared to Western populations. Salt sensitivity is also higher in South Asian populations, making dietary sodium reduction especially impactful.</p>
+          </div>
+
+          <!-- Section: Warning Signs -->
+          <h2 class="reveal" style="margin-top:44px;">Warning Signs You Shouldn't Ignore</h2>
+          <p class="reveal">Here lies the true danger of hypertension: <strong>most people have absolutely no symptoms</strong>, even when their blood pressure is dangerously high. This is why it is so important to get regular readings — you cannot feel your way to a diagnosis.</p>
+          <p class="reveal">However, when blood pressure reaches extremely high levels (hypertensive crisis, typically above 180/120 mmHg), some people may experience:</p>
+          <ul class="blog-list reveal" style="padding-left:20px;line-height:2;">
+            <li>Severe, sudden headache — often described as the "worst headache of your life"</li>
+            <li>Chest pain or tightness</li>
+            <li>Blurred or double vision, or sudden vision loss</li>
+            <li>Difficulty breathing or shortness of breath</li>
+            <li>Blood in urine (hematuria)</li>
+            <li>Sudden numbness or weakness in the face, arm, or leg</li>
+            <li>Confusion, difficulty speaking</li>
+          </ul>
+          <p class="reveal">If you experience any of these symptoms, seek emergency care immediately. These are signs that target organ damage may be occurring.</p>
+
+          <!-- Section: Consequences -->
+          <h2 class="reveal" style="margin-top:44px;">Long-Term Consequences of Untreated Hypertension</h2>
+          <p class="reveal">Sustained high pressure in the arteries causes progressive structural damage throughout the body. The consequences of uncontrolled hypertension are severe and often irreversible:</p>
+          <ul class="blog-list reveal" style="padding-left:20px;line-height:2;">
+            <li><strong>Heart attack:</strong> Hypertension is the leading risk factor for coronary artery disease. High pressure accelerates plaque buildup in coronary arteries, narrowing them until a clot triggers a heart attack.</li>
+            <li><strong>Stroke:</strong> Hypertension is responsible for approximately 54% of all strokes globally — both ischemic (clot) and hemorrhagic (burst vessel).</li>
+            <li><strong>Kidney failure:</strong> The kidneys rely on delicate blood vessels. Chronic high pressure damages these vessels, progressively impairing kidney function and potentially leading to dialysis.</li>
+            <li><strong>Vision loss:</strong> Hypertensive retinopathy occurs when high pressure damages the blood vessels in the retina, potentially causing permanent blindness.</li>
+            <li><strong>Aortic aneurysm:</strong> Chronically elevated pressure can cause the wall of the aorta to weaken and bulge, creating an aneurysm that may rupture — a life-threatening emergency.</li>
+            <li><strong>Heart failure:</strong> The heart muscle thickens in response to sustained high pressure, eventually losing its ability to pump effectively.</li>
+          </ul>
+          <p class="reveal">Every 20 mmHg increase in systolic pressure above 115/75 mmHg doubles the risk of cardiovascular death. The stakes are extraordinarily high — and entirely preventable.</p>
+
+          <!-- Section: Lifestyle -->
+          <h2 class="reveal" style="margin-top:44px;">Lifestyle Changes That Make a Real Difference</h2>
+          <p class="reveal">Lifestyle modification is the cornerstone of hypertension management, and for many people with Stage 1 hypertension, it is sufficient to bring blood pressure back to a safe range without medication. Here is what the evidence shows actually works:</p>
+
+          <div class="blog-tip reveal" style="background:linear-gradient(135deg,rgba(23,165,137,0.08),rgba(23,165,137,0.03));border:1px solid rgba(23,165,137,0.3);border-radius:14px;padding:22px 26px;margin:24px 0;">
+            <h4 style="color:var(--secondary);margin-bottom:14px;"><i class="fa-solid fa-lightbulb" style="margin-right:8px;"></i>Lifestyle Changes and Their BP Impact</h4>
+            <ul style="padding-left:18px;line-height:2.1;margin:0;">
+              <li><strong>DASH Diet:</strong> Rich in fruits, vegetables, low-fat dairy, and whole grains — can reduce systolic BP by 8–14 mmHg.</li>
+              <li><strong>Salt reduction:</strong> Cutting sodium from 9–12g to 5g per day reduces systolic BP by 4–9 mmHg. Avoid pickles, papads, processed foods, and adding table salt.</li>
+              <li><strong>Regular aerobic exercise:</strong> 150 minutes per week of moderate activity (brisk walking, swimming, cycling) lowers BP by 4–9 mmHg.</li>
+              <li><strong>Weight loss:</strong> Losing just 5 kg of body weight can reduce systolic pressure by 5 mmHg.</li>
+              <li><strong>Stop smoking:</strong> Each cigarette raises BP for up to 30 minutes; quitting permanently lowers cardiovascular risk.</li>
+              <li><strong>Limit alcohol:</strong> Restrict to no more than 1 standard drink per day for women, 2 for men.</li>
+              <li><strong>Stress management:</strong> Daily relaxation techniques — yoga, meditation, pranayama — have measurable antihypertensive effects.</li>
+            </ul>
+          </div>
+
+          <p class="reveal">Combining multiple lifestyle changes compounds the benefits significantly. For example, adopting the DASH diet alongside a regular exercise routine and sodium reduction could reduce your systolic pressure by 20 mmHg or more — equivalent to a single antihypertensive medication.</p>
+
+          <!-- Section: Medication -->
+          <h2 class="reveal" style="margin-top:44px;">When Do You Need Medication?</h2>
+          <p class="reveal">The decision to start medication depends on your blood pressure level and your overall cardiovascular risk profile. As a general guide:</p>
+          <ul class="blog-list reveal" style="padding-left:20px;line-height:2;">
+            <li><strong>Stage 1 Hypertension (130–139/80–89 mmHg):</strong> Medication is typically recommended only if you have cardiovascular disease, diabetes, kidney disease, or a 10-year heart disease risk above 10%. Otherwise, lifestyle changes alone are tried for 3–6 months first.</li>
+            <li><strong>Stage 2 Hypertension (≥140/≥90 mmHg):</strong> Medication is generally started alongside lifestyle changes without delay.</li>
+          </ul>
+          <p class="reveal">Common medication classes used in hypertension include ACE inhibitors, ARBs (angiotensin receptor blockers), calcium channel blockers, thiazide diuretics, and beta-blockers. Your doctor will choose based on any co-existing conditions and your tolerance. Many patients require a combination of two or more medications to achieve adequate control.</p>
+          <p class="reveal"><strong>Compliance is critical.</strong> Many patients stop their medication when they "feel fine" — this is dangerous. Hypertension medications control, not cure, the condition. Stopping abruptly can cause a rebound spike in blood pressure. Never discontinue or adjust medication without consulting your doctor.</p>
+
+          <!-- Section: Home Monitoring -->
+          <h2 class="reveal" style="margin-top:44px;">Monitoring Your Blood Pressure at Home</h2>
+          <p class="reveal">Home blood pressure monitoring (HBPM) has become a valuable tool for diagnosis and management. It helps identify "white coat hypertension" (elevated readings only in clinical settings) and "masked hypertension" (normal readings in clinic but elevated at home). Here is how to do it correctly:</p>
+          <ul class="blog-list reveal" style="padding-left:20px;line-height:2;">
+            <li>Use a validated upper-arm cuff monitor, not a wrist device.</li>
+            <li>Sit quietly for 5 minutes before measuring, back supported, feet flat on the floor.</li>
+            <li>Do not smoke, exercise, or drink caffeine for 30 minutes before measurement.</li>
+            <li>Keep your arm at heart level during measurement.</li>
+            <li>Take two readings, 1–2 minutes apart, and record both. Take measurements morning and evening for at least 7 days.</li>
+            <li>Bring your home log to every doctor's appointment.</li>
+          </ul>
+          <p class="reveal">For a more comprehensive assessment, Prithvi Clinic offers <strong>24-hour ambulatory blood pressure monitoring (ABPM)</strong> — the gold standard for hypertension diagnosis. This device measures your BP every 15–30 minutes throughout the day and night, providing a complete picture of your pressure patterns, nocturnal dipping, and overall cardiovascular risk.</p>
+
+          <!-- Section: CTA -->
+          <h2 class="reveal" style="margin-top:44px;">Don't Wait for Symptoms</h2>
+          <p class="reveal">The single most important message in hypertension management is this: <strong>do not wait until you feel unwell to check your blood pressure.</strong> By the time symptoms appear, significant damage may already have occurred. A blood pressure check takes less than two minutes and could save your life.</p>
+          <p class="reveal">At <strong>Prithvi Clinic</strong>, we provide comprehensive hypertension management including same-day blood pressure checks, 24-hour ambulatory BP monitoring, cardiovascular risk assessment, and individualized treatment plans combining lifestyle guidance with medication where needed. Our team believes in treating the whole person — not just the numbers.</p>
+          <p class="reveal">Whether you have been told your blood pressure is "borderline" in the past, have a family history of hypertension or heart disease, or simply haven't had your BP checked in the last year — <strong>now is the time to act.</strong></p>
+
+          <div class="blog-cta-box reveal" style="background:linear-gradient(135deg,var(--primary),#0d4f7c);border-radius:16px;padding:32px;margin:36px 0;text-align:center;color:#fff;">
+            <h3 style="color:#fff;margin-bottom:10px;"><i class="fa-solid fa-heart-pulse" style="margin-right:10px;color:var(--accent);"></i>Get Your Blood Pressure Checked Today</h3>
+            <p style="color:rgba(255,255,255,0.85);margin-bottom:22px;">Don't wait for symptoms. Book a BP screening and cardiovascular risk assessment at Prithvi Clinic.</p>
+            <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+              <a href="../index.html#appointment" class="btn" style="background:var(--accent);color:var(--dark);font-weight:700;padding:12px 28px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+              <a href="tel:9600123463" class="btn" style="background:rgba(255,255,255,0.15);color:#fff;font-weight:600;padding:12px 28px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,0.3);"><i class="fa-solid fa-phone"></i> 96001 23463</a>
+            </div>
+          </div>
+
+          <p class="reveal">High blood pressure is not a life sentence — it is a condition that, when properly managed, allows you to live a long and healthy life. The power to protect yourself begins with a single blood pressure reading and the decision to take your health seriously.</p>
+
+          <!-- Share Buttons -->
+          <div class="blog-share reveal" style="margin-top:44px;padding-top:28px;border-top:1px solid #e0e7ef;">
+            <p style="font-weight:600;color:var(--dark);margin-bottom:14px;">Found this article helpful? Share it:</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <a href="https://wa.me/?text=The%20Silent%20Threat%3A%20Understanding%20High%20Blood%20Pressure%20-%20https%3A%2F%2Fprithviclinic.com%2Fblog%2Fblood-pressure.html" target="_blank" rel="noopener" style="background:#25D366;color:#fff;padding:10px 20px;border-radius:50px;text-decoration:none;font-size:0.9rem;font-weight:600;display:inline-flex;align-items:center;gap:8px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fprithviclinic.com%2Fblog%2Fblood-pressure.html" target="_blank" rel="noopener" style="background:#1877F2;color:#fff;padding:10px 20px;border-radius:50px;text-decoration:none;font-size:0.9rem;font-weight:600;display:inline-flex;align-items:center;gap:8px;"><i class="fab fa-facebook-f"></i> Facebook</a>
+              <a href="https://twitter.com/intent/tweet?text=The%20Silent%20Threat%3A%20Understanding%20High%20Blood%20Pressure&url=https%3A%2F%2Fprithviclinic.com%2Fblog%2Fblood-pressure.html" target="_blank" rel="noopener" style="background:#1DA1F2;color:#fff;padding:10px 20px;border-radius:50px;text-decoration:none;font-size:0.9rem;font-weight:600;display:inline-flex;align-items:center;gap:8px;"><i class="fab fa-twitter"></i> Twitter</a>
+              <button onclick="navigator.clipboard.writeText(window.location.href);this.textContent='Copied!';" style="background:var(--bg-alt);color:var(--dark);padding:10px 20px;border-radius:50px;border:1px solid #d0d9e4;font-size:0.9rem;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px;"><i class="fa-regular fa-copy"></i> Copy Link</button>
+            </div>
+          </div>
+
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="blog-sidebar">
+          <div class="sidebar-card">
+            <h4>Related Posts</h4>
+            <div class="related-post">
+              <div class="rp-icon" style="background:rgba(10,61,98,0.08);">😴</div>
+              <div class="rp-text">
+                <a href="sleep-health.html">Why Sleep Matters More Than You Think</a>
+                <span>Sleep Health</span>
+              </div>
+            </div>
+            <div class="related-post">
+              <div class="rp-icon" style="background:rgba(23,165,137,0.08);">🏃</div>
+              <div class="rp-text">
+                <a href="general-health-habits.html">10 General Health Habits for Longevity</a>
+                <span>General Health</span>
+              </div>
+            </div>
+            <div class="related-post">
+              <div class="rp-icon" style="background:rgba(10,61,98,0.08);">🧠</div>
+              <div class="rp-text">
+                <a href="neurology-signs.html">Early Signs of Neurological Disorders</a>
+                <span>Neurology</span>
+              </div>
+            </div>
+            <div class="related-post">
+              <div class="rp-icon" style="background:rgba(240,180,41,0.08);">🩺</div>
+              <div class="rp-text">
+                <a href="health-checkups.html">Why Regular Checkups Save Lives</a>
+                <span>Preventive Care</span>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-cta-card">
+            <h4 style="color:white;border-bottom:2px solid rgba(255,255,255,0.3);padding-bottom:10px;margin-bottom:14px;">Need Medical Advice?</h4>
+            <p>Our doctors are ready to help. Book an appointment today.</p>
+            <a href="../index.html#appointment" class="btn btn-white btn-sm btn-full">Book Appointment</a>
+            <a href="tel:9600123463" class="btn btn-sm btn-full" style="margin-top:10px;background:rgba(255,255,255,0.15);color:white;border-radius:50px;justify-content:center;"><i class="fa-solid fa-phone"></i> 96001 23463</a>
+          </div>
+          <div class="sidebar-card">
+            <h4>Categories</h4>
+            <div class="tag-list">
+              <a href="index.html" class="tag">Sleep Health</a>
+              <a href="index.html" class="tag">General Health</a>
+              <a href="index.html" class="tag">Neurology</a>
+              <a href="index.html" class="tag">Preventive Care</a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo"><div class="fl-icon"><i class="fa-solid fa-plus"></i></div>Prithvi Clinic</div>
+          <p style="margin-bottom:6px;font-weight:600;color:rgba(255,255,255,0.9);">Your Health, Our Priority</p>
+          <p>Trusted healthcare in Mogappair since 2018.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <nav class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#about">About</a>
+            <a href="../diagnostics.html">Diagnostics</a>
+            <a href="../homecare.html">Home Care</a>
+            <a href="index.html">Blog</a>
+            <a href="../index.html#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <nav class="footer-links">
+            <a href="../services/general-medicine.html">General Medicine</a>
+            <a href="../services/gynecology.html">Gynaecology</a>
+            <a href="../services/neurology.html">Neurology</a>
+            <a href="../homecare.html">Home Care</a>
+            <a href="../diagnostics.html">Diagnostics</a>
+            <a href="index.html">Blog</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><div><a href="tel:9600123463">96001 23463</a><br/><a href="tel:7397391156">7397391156</a></div></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:prithviclinic@gmail.com">prithviclinic@gmail.com</a></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>8 Thilakar St, Mogappair West, Chennai – 600037</span></div>
+          <a href="https://wa.me/917397391156" class="footer-wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2025 <span>Prithvi Clinic</span> · All Rights Reserved · Chennai</div></div>
+  </footer>
+
+  <!-- Floating Elements -->
+  <div class="float-wrap">
+    <button id="scrollTop" aria-label="Scroll to top"><i class="fa-solid fa-chevron-up"></i></button>
+    <div class="wa-float">
+      <div class="wa-pulse"></div>
+      <a href="https://wa.me/917397391156" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <div class="wa-tooltip">Chat with us</div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(gh:*)",
+      "Bash(winget install:*)",
+      "Bash(where.exe gh:*)",
+      "Read(//c/Program Files/GitHub CLI/**)",
+      "Read(//c/Users/$USER/AppData/Local/**)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" auth login)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" repo create claudewebtest --private)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" api repos/Prashanthsri12/claudewebtest/pages -X POST -f source.branch=main -f source.path=/)"
+    ]
+  }
+}
