@@ -1,5 +1,5 @@
 /* ============================================================
-   PRITHVI CLINIC — SHARED STYLESHEET
+   DYNAMIC CREATIVE HEALTH CARE — SHARED STYLESHEET
    Fonts: Plus Jakarta Sans (headings) + Inter (body)
    CDN: Font Awesome 6.5.1
 ============================================================ */
@@ -479,4 +479,136 @@ section { padding: 90px 0; }
   .cta-band .cta-btns { flex-direction: column; align-items: center; }
   #emergency-bar .container { justify-content: center; }
   .blog-share { gap: 8px; }
+}
+
+/* ─────────────────────────────────────────────────────────
+   SECTION BACKGROUND HELPERS (diagnostics / homecare)
+───────────────────────────────────────────────────────── */
+.section-white { background: var(--white); }
+.section-bg-alt { background: var(--bg-alt); }
+
+/* ─────────────────────────────────────────────────────────
+   TWO-COLUMN GRID (diagnostics / homecare)
+───────────────────────────────────────────────────────── */
+.two-col-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+.two-col-grid.align-center { align-items: center; }
+
+/* ─────────────────────────────────────────────────────────
+   CHECK LIST
+───────────────────────────────────────────────────────── */
+.check-list { list-style: none; padding: 0; margin: 24px 0 32px; display: flex; flex-direction: column; gap: 12px; }
+.check-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; }
+.check-list li i { color: var(--secondary); margin-top: 3px; font-size: 14px; flex-shrink: 0; }
+
+/* ─────────────────────────────────────────────────────────
+   DIAGNOSTICS STATS BOX
+───────────────────────────────────────────────────────── */
+.diag-stats-box {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: var(--radius-lg); padding: 40px 32px;
+  color: var(--white); display: flex; flex-direction: column;
+  box-shadow: var(--shadow-lg);
+}
+.diag-stat-item { text-align: center; padding: 24px 0; }
+.diag-stat-number { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 48px; font-weight: 800; line-height: 1; margin-bottom: 8px; color: var(--accent); }
+.diag-stat-label { font-size: 14px; opacity: 0.85; }
+.diag-stat-divider { height: 1px; background: rgba(255,255,255,0.2); }
+
+/* ─────────────────────────────────────────────────────────
+   DIAGNOSTIC CARD ICON + LIST (diagnostics page)
+───────────────────────────────────────────────────────── */
+.diag-card-icon { width: 64px; height: 64px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 20px; background: linear-gradient(135deg,rgba(10,61,98,.07),rgba(23,165,137,.1)); color: var(--secondary); }
+.diag-card-list { list-style: none; padding: 0; }
+.diag-card-list li { font-size: 13px; color: var(--text-body); padding: 6px 0; border-bottom: 1px solid var(--bg-alt); display: flex; align-items: center; gap: 8px; }
+.diag-card-list li i { color: var(--secondary); font-size: 12px; flex-shrink: 0; }
+.diag-card-list li::before { display: none; }
+
+/* ─────────────────────────────────────────────────────────
+   WHY DIAGNOSTICS GRID
+───────────────────────────────────────────────────────── */
+.why-diag-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.why-diag-card { background: var(--bg); border-radius: var(--radius-lg); padding: 32px; text-align: center; box-shadow: var(--shadow-sm); transition: var(--transition); }
+.why-diag-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); background: var(--white); }
+.why-diag-emoji { font-size: 40px; margin-bottom: 16px; display: block; }
+.why-diag-card h3 { font-size: 16px; color: var(--primary); margin-bottom: 8px; }
+.why-diag-card p { font-size: 14px; color: var(--text-body); margin: 0; }
+
+/* ─────────────────────────────────────────────────────────
+   CTA BAND EXTRAS
+───────────────────────────────────────────────────────── */
+.cta-band-content { max-width: 640px; margin: 0 auto; }
+.cta-band-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px; }
+.btn-accent { background: var(--accent); color: var(--text-dark); }
+.btn-accent:hover { background: #d4a017; transform: translateY(-2px); }
+.btn-whatsapp { background: #25D366; color: var(--white); }
+.btn-whatsapp:hover { background: #1ebe5d; transform: translateY(-2px); }
+.btn-outline-white { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.6); }
+.btn-outline-white:hover { background: rgba(255,255,255,0.15); border-color: var(--white); transform: translateY(-2px); }
+
+/* ─────────────────────────────────────────────────────────
+   HOMECARE INFO GRID
+───────────────────────────────────────────────────────── */
+.homecare-info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.homecare-info-card { background: var(--white); border-radius: var(--radius-lg); padding: 32px; text-align: center; box-shadow: var(--shadow-sm); transition: var(--transition); }
+.homecare-info-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.homecare-info-emoji { font-size: 40px; margin-bottom: 16px; display: block; }
+.homecare-info-card h3 { font-size: 16px; color: var(--primary); margin-bottom: 8px; }
+.homecare-info-card p { font-size: 14px; color: var(--text-body); margin: 0; }
+
+/* ─────────────────────────────────────────────────────────
+   HOMECARE VISUAL BLOCK
+───────────────────────────────────────────────────────── */
+.homecare-visual-block { border-radius: var(--radius-lg); aspect-ratio: 4/3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; box-shadow: var(--shadow-lg); overflow: hidden; }
+.homecare-visual-emoji { font-size: 80px; line-height: 1; }
+.homecare-visual-label { font-size: 16px; font-weight: 700; color: var(--white); opacity: 0.9; }
+.homecare-detail-content p { margin-bottom: 16px; }
+
+/* ─────────────────────────────────────────────────────────
+   HOMECARE STATS BOX
+───────────────────────────────────────────────────────── */
+.homecare-stats-box { background: linear-gradient(135deg, var(--secondary), var(--primary)); border-radius: var(--radius-lg); padding: 40px 32px; color: var(--white); display: flex; flex-direction: column; box-shadow: var(--shadow-lg); }
+.homecare-stat-item { text-align: center; padding: 24px 0; }
+.homecare-stat-number { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 48px; font-weight: 800; line-height: 1; margin-bottom: 8px; color: var(--accent); }
+.homecare-stat-icon { font-size: 36px; margin-bottom: 8px; }
+.homecare-stat-label { font-size: 14px; opacity: 0.85; }
+.homecare-stat-divider { height: 1px; background: rgba(255,255,255,0.2); }
+
+/* ─────────────────────────────────────────────────────────
+   HOMECARE PROCESS STEP VARIANTS
+───────────────────────────────────────────────────────── */
+.process-step-number { width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg,var(--primary),var(--secondary)); color: var(--white); font-family: 'Plus Jakarta Sans',sans-serif; font-weight: 800; font-size: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; box-shadow: var(--shadow-md); }
+.process-step-icon { font-size: 24px; color: var(--secondary); margin-bottom: 12px; display: block; text-align: center; }
+.process-step h4 { font-size: 14px; font-weight: 600; color: var(--text-dark); margin-bottom: 8px; }
+
+/* ─────────────────────────────────────────────────────────
+   BLOG INDEX PAGE
+───────────────────────────────────────────────────────── */
+.page-hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; padding: 7px 16px; color: var(--white); font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+.blog-featured-thumb { height: 100%; min-height: 280px; background: var(--bg-alt); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.blog-featured-content { padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+.blog-featured-content h3 { font-size: 24px; margin-bottom: 14px; color: var(--text-dark); line-height: 1.4; }
+.blog-featured-content h3 a { transition: var(--transition); }
+.blog-featured-content h3 a:hover { color: var(--secondary); }
+.blog-featured-content p { font-size: 15px; color: var(--text-body); margin-bottom: 24px; line-height: 1.8; }
+
+/* ─────────────────────────────────────────────────────────
+   DOCTOR PHOTO (image-based cards)
+───────────────────────────────────────────────────────── */
+.doctor-avatar-img { width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin: 0 auto 20px; box-shadow: 0 8px 20px rgba(10,61,98,.2); border: 3px solid rgba(23,165,137,.35); }
+.doctor-avatar-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.about-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.service-img-block img { width: 100%; height: 100%; object-fit: cover; display: block; position: absolute; top: 0; left: 0; }
+.doc-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
+
+/* ─────────────────────────────────────────────────────────
+   RESPONSIVE ADDITIONS
+───────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .two-col-grid { grid-template-columns: 1fr; gap: 40px; }
+  .why-diag-grid { grid-template-columns: repeat(2, 1fr); }
+  .homecare-info-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .why-diag-grid { grid-template-columns: 1fr; }
+  .homecare-info-grid { grid-template-columns: 1fr; }
 }

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a237e"/>
+      <stop offset="100%" style="stop-color:#17A589"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#bg)"/>
+  <!-- Decorative circles -->
+  <circle cx="520" cy="80" r="130" fill="rgba(255,255,255,0.04)"/>
+  <circle cx="80" cy="380" r="110" fill="rgba(255,255,255,0.04)"/>
+  <!-- Brain outline (simplified) -->
+  <path d="M220 200 Q200 160 230 140 Q260 120 280 140 Q290 130 310 130 Q340 125 355 150 Q380 145 390 170 Q410 175 405 205 Q415 230 395 245 Q390 270 365 270 Q350 285 325 278 Q305 290 285 278 Q260 285 245 268 Q220 260 215 240 Q205 225 220 200Z" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.6)" stroke-width="3"/>
+  <!-- Brain fold lines -->
+  <path d="M255 165 Q260 185 250 200" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M285 150 Q290 170 280 190" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M320 148 Q325 170 315 188" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M350 160 Q355 180 345 200" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M230 220 Q250 215 265 225" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M295 240 Q315 235 335 245" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Neural connections (dots) -->
+  <circle cx="260" cy="310" r="4" fill="rgba(240,180,41,0.8)"/>
+  <circle cx="310" cy="320" r="4" fill="rgba(240,180,41,0.8)"/>
+  <circle cx="360" cy="305" r="4" fill="rgba(240,180,41,0.8)"/>
+  <line x1="264" y1="310" x2="306" y2="320" stroke="rgba(240,180,41,0.4)" stroke-width="1.5"/>
+  <line x1="314" y1="320" x2="356" y2="305" stroke="rgba(240,180,41,0.4)" stroke-width="1.5"/>
+  <!-- Label -->
+  <rect x="0" y="390" width="600" height="60" fill="rgba(0,0,0,0.4)"/>
+  <text x="300" y="416" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="white" font-weight="bold">Advanced Neurology</text>
+  <text x="300" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.75)">Replace with: neurology.jpg (600×450px)</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F9EBF8"/>
+      <stop offset="100%" style="stop-color:#D1ECF1"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF"/>
+      <stop offset="100%" style="stop-color:#F5EEF8"/>
+    </linearGradient>
+    <clipPath id="circle"><circle cx="200" cy="200" r="200"/></clipPath>
+  </defs>
+  <circle cx="200" cy="200" r="200" fill="url(#bg)"/>
+  <!-- White coat body -->
+  <ellipse cx="200" cy="370" rx="130" ry="90" fill="url(#coat)" clip-path="url(#circle)"/>
+  <!-- Shirt -->
+  <rect x="182" y="258" width="36" height="80" fill="#6b2d8b" opacity="0.6" clip-path="url(#circle)"/>
+  <!-- Stethoscope -->
+  <path d="M160 270 Q155 300 165 310 Q175 320 185 310" fill="none" stroke="#6b2d8b" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="165" cy="315" r="8" fill="#17A589"/>
+  <!-- Neck -->
+  <rect x="185" y="228" width="30" height="40" fill="#F4C7A7" clip-path="url(#circle)"/>
+  <!-- Head -->
+  <ellipse cx="200" cy="182" rx="52" ry="58" fill="#F4C7A7"/>
+  <!-- Hair - long dark hair -->
+  <ellipse cx="200" cy="140" rx="54" ry="22" fill="#1a0a0a"/>
+  <ellipse cx="200" cy="150" rx="56" ry="15" fill="#1a0a0a"/>
+  <!-- Side hair -->
+  <path d="M148 170 Q145 220 150 260" fill="#1a0a0a" stroke="none"/>
+  <path d="M252 170 Q255 220 250 260" fill="#1a0a0a" stroke="none"/>
+  <!-- Eyes -->
+  <ellipse cx="183" cy="180" rx="8" ry="9" fill="white"/>
+  <ellipse cx="217" cy="180" rx="8" ry="9" fill="white"/>
+  <circle cx="184" cy="181" r="5" fill="#1a1a2e"/>
+  <circle cx="218" cy="181" r="5" fill="#1a1a2e"/>
+  <circle cx="186" cy="179" r="2" fill="white"/>
+  <circle cx="220" cy="179" r="2" fill="white"/>
+  <!-- Eyebrows -->
+  <path d="M175 171 Q183 167 191 171" fill="none" stroke="#1a0a0a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M209 171 Q217 167 225 171" fill="none" stroke="#1a0a0a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Smile -->
+  <path d="M189 202 Q200 212 211 202" fill="none" stroke="#C07850" stroke-width="2" stroke-linecap="round"/>
+  <!-- Nose -->
+  <path d="M197 190 Q200 198 203 190" fill="none" stroke="#C07850" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Bindi -->
+  <circle cx="200" cy="162" r="3" fill="#cc0000"/>
+  <!-- White coat collar -->
+  <path d="M150 255 L185 228 L185 278 L150 298 Z" fill="url(#coat)" clip-path="url(#circle)"/>
+  <path d="M250 255 L215 228 L215 278 L250 298 Z" fill="url(#coat)" clip-path="url(#circle)"/>
+  <!-- Name label -->
+  <rect x="0" y="350" width="400" height="50" fill="rgba(107,45,139,0.85)"/>
+  <text x="200" y="371" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="white" font-weight="bold">Dr. S.V. Priyanka</text>
+  <text x="200" y="389" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.8)">Replace with: doctor-priyanka.jpg (400×400px)</text>
+</svg>

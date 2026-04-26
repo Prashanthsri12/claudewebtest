@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A3D62"/>
+      <stop offset="100%" style="stop-color:#17A589"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#bg)"/>
+  <!-- Decorative circles -->
+  <circle cx="500" cy="80" r="120" fill="rgba(255,255,255,0.04)"/>
+  <circle cx="100" cy="380" r="100" fill="rgba(255,255,255,0.04)"/>
+  <!-- Medical cross -->
+  <rect x="235" y="150" width="130" height="40" fill="rgba(255,255,255,0.9)" rx="6"/>
+  <rect x="275" y="110" width="50" height="120" fill="rgba(255,255,255,0.9)" rx="6"/>
+  <!-- Stethoscope icon area -->
+  <circle cx="300" cy="290" r="70" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <path d="M270 270 Q265 300 275 310 Q285 320 295 310 Q300 295 295 280" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="295" cy="310" r="12" fill="rgba(255,255,255,0.7)"/>
+  <!-- Label -->
+  <rect x="0" y="390" width="600" height="60" fill="rgba(0,0,0,0.4)"/>
+  <text x="300" y="416" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="white" font-weight="bold">General &amp; Emergency Medicine</text>
+  <text x="300" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.75)">Replace with: general-medicine.jpg (600×450px)</text>
+</svg>
